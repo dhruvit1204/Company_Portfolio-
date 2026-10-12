@@ -1,10 +1,9 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Search, RotateCcw, Download, FileText } from 'lucide-react';
+import { Search, RotateCcw } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PROJECTS, CATEGORIES, ProjectCategory, Project } from '../data/projects';
 import { ProjectCard } from '../components/ProjectCard';
-import { downloadMasterPortfolioPdf } from '../utils/pdfDownload';
 import { isReducedMotion, TRANSITIONS } from '../utils/animations';
 
 interface Props {
@@ -237,36 +236,6 @@ export const ProjectExplorer: React.FC<Props> = () => {
               </div>
             </div>
           )}
-        </div>
-
-        {/* B2B Executive Portfolio PDF Download Banner */}
-        <div className="mt-14 rounded-3xl bg-gradient-to-br from-cyprus-deepest via-cyprus-deep to-[#0A192F] border border-sand-shade/80 p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl text-sand relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
-          
-          <div className="relative z-10 space-y-2 text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-2 text-accent font-mono text-[11px] uppercase tracking-wider font-semibold">
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span>Official B2B Technology Deck • 2026 Edition</span>
-            </div>
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-display text-white">
-              Evaluating Exception IT Solutions for Your Enterprise?
-            </h3>
-            <p className="text-xs sm:text-sm text-sand-muted max-w-xl leading-relaxed">
-              Download our complete 17-page B2B Company Portfolio PDF featuring technical architectures, sprint delivery methodologies, and verified case studies across all 8 projects.
-            </p>
-          </div>
-          <div className="relative z-10 shrink-0 flex flex-wrap items-center gap-3">
-            <button
-              onClick={() => downloadMasterPortfolioPdf()}
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-accent text-cyprus-deepest font-bold text-xs uppercase tracking-wider hover:bg-accent/90 active:scale-95 transition-all shadow-lg shadow-accent/20 cursor-pointer"
-            >
-              <Download className="w-4 h-4" />
-              <span>Download B2B Portfolio (PDF)</span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyprus-deepest/15 font-semibold">
-                17 Pgs • 5.0 MB
-              </span>
-            </button>
-          </div>
         </div>
       </div>
     </section>
