@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800">
+  <defs>
+    <linearGradient id="bookBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c182a"/>
+      <stop offset="50%" stop-color="#122540"/>
+      <stop offset="100%" stop-color="#0e1b2e"/>
+    </linearGradient>
+    <linearGradient id="cover1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="cover2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#be185d"/>
+    </linearGradient>
+    <linearGradient id="cover3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="cover4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="bookShadow" x="-10%" y="-5%" width="125%" height="115%">
+      <feDropShadow dx="8" dy="12" stdDeviation="10" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="800" fill="url(#bookBg)"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1000" height="64" fill="#0f2038"/>
+  <line x1="0" y1="64" x2="1000" y2="64" stroke="#1d385f" stroke-width="1"/>
+  <text x="40" y="38" fill="#ffffff" font-family="system-ui" font-size="18" font-weight="700">PAPERFLOW 3D VIRTUAL BOOKSHELF</text>
+  <rect x="760" y="18" width="200" height="30" rx="15" fill="#173155" stroke="#254a7c" stroke-width="1"/>
+  <text x="785" y="38" fill="#94a3b8" font-family="system-ui" font-size="12">Search 48 publications...</text>
+
+  <!-- Row 1 Bookshelf -->
+  <g transform="translate(60, 110)">
+    <!-- Book 1 -->
+    <g transform="translate(0, 0)" filter="url(#bookShadow)">
+      <rect x="0" y="0" width="190" height="260" rx="6" fill="url(#cover1)"/>
+      <rect x="0" y="0" width="16" height="260" rx="3" fill="#1e3a8a"/>
+      <text x="30" y="50" fill="#ffffff" font-family="system-ui" font-size="14" font-weight="800">DESIGN FORWARD</text>
+      <text x="30" y="70" fill="#93c5fd" font-family="monospace" font-size="10">VOL 14 • 84 PAGES</text>
+      <rect x="30" y="210" width="130" height="26" rx="13" fill="#ffffff" fill-opacity="0.2"/>
+      <text x="50" y="227" fill="#ffffff" font-family="system-ui" font-size="11" font-weight="700">READ ISSUE 3D</text>
+    </g>
+
+    <!-- Book 2 -->
+    <g transform="translate(230, 0)" filter="url(#bookShadow)">
+      <rect x="0" y="0" width="190" height="260" rx="6" fill="url(#cover2)"/>
+      <rect x="0" y="0" width="16" height="260" rx="3" fill="#831843"/>
+      <text x="30" y="50" fill="#ffffff" font-family="system-ui" font-size="14" font-weight="800">CYBER FUTURES</text>
+      <text x="30" y="70" fill="#fbcfe8" font-family="monospace" font-size="10">SPECIAL REPORT</text>
+      <rect x="30" y="210" width="130" height="26" rx="13" fill="#ffffff" fill-opacity="0.2"/>
+      <text x="50" y="227" fill="#ffffff" font-family="system-ui" font-size="11" font-weight="700">READ ISSUE 3D</text>
+    </g>
+
+    <!-- Book 3 -->
+    <g transform="translate(460, 0)" filter="url(#bookShadow)">
+      <rect x="0" y="0" width="190" height="260" rx="6" fill="url(#cover3)"/>
+      <rect x="0" y="0" width="16" height="260" rx="3" fill="#064e3b"/>
+      <text x="30" y="50" fill="#ffffff" font-family="system-ui" font-size="14" font-weight="800">ECO ARCHITECTURE</text>
+      <text x="30" y="70" fill="#a7f3d0" font-family="monospace" font-size="10">WINTER 2025</text>
+      <rect x="30" y="210" width="130" height="26" rx="13" fill="#ffffff" fill-opacity="0.2"/>
+      <text x="50" y="227" fill="#ffffff" font-family="system-ui" font-size="11" font-weight="700">READ ISSUE 3D</text>
+    </g>
+
+    <!-- Book 4 -->
+    <g transform="translate(690, 0)" filter="url(#bookShadow)">
+      <rect x="0" y="0" width="190" height="260" rx="6" fill="url(#cover4)"/>
+      <rect x="0" y="0" width="16" height="260" rx="3" fill="#78350f"/>
+      <text x="30" y="50" fill="#ffffff" font-family="system-ui" font-size="14" font-weight="800">VENTURE SCALE</text>
+      <text x="30" y="70" fill="#fde68a" font-family="monospace" font-size="10">ANNUAL REVIEW</text>
+      <rect x="30" y="210" width="130" height="26" rx="13" fill="#ffffff" fill-opacity="0.2"/>
+      <text x="50" y="227" fill="#ffffff" font-family="system-ui" font-size="11" font-weight="700">READ ISSUE 3D</text>
+    </g>
+
+    <!-- Shelf Board -->
+    <rect x="-20" y="270" width="920" height="18" rx="4" fill="#1e3a61" stroke="#2a4f7e" stroke-width="1"/>
+  </g>
+
+  <!-- Performance & Reader Stats Strip -->
+  <g transform="translate(60, 440)">
+    <rect x="0" y="0" width="880" height="280" rx="14" fill="#102138" stroke="#1d3a5e" stroke-width="1"/>
+    <text x="30" y="40" fill="#ffffff" font-family="system-ui" font-size="16" font-weight="700">Digital Publication Analytics & Reader Ergonomics</text>
+
+    <!-- Metric 1 -->
+    <rect x="30" y="70" width="250" height="170" rx="10" fill="#0b1728" stroke="#172e4b" stroke-width="1"/>
+    <text x="50" y="105" fill="#94a3b8" font-family="system-ui" font-size="12">FRAME RATE PERFORMANCE</text>
+    <text x="50" y="145" fill="#38bdf8" font-family="monospace" font-size="32" font-weight="800">60 FPS</text>
+    <text x="50" y="175" fill="#64748b" font-family="system-ui" font-size="11">Hardware-accelerated WebGL</text>
+    <text x="50" y="200" fill="#10b981" font-family="system-ui" font-size="12" font-weight="600">✓ Zero frame drop on touch</text>
+
+    <!-- Metric 2 -->
+    <rect x="315" y="70" width="250" height="170" rx="10" fill="#0b1728" stroke="#172e4b" stroke-width="1"/>
+    <text x="335" y="105" fill="#94a3b8" font-family="system-ui" font-size="12">AVERAGE READ TIME</text>
+    <text x="335" y="145" fill="#f59e0b" font-family="monospace" font-size="32" font-weight="800">8m 42s</text>
+    <text x="335" y="175" fill="#64748b" font-family="system-ui" font-size="11">3.4x vs static PDF scroll</text>
+    <text x="335" y="200" fill="#34d399" font-family="system-ui" font-size="12" font-weight="600">✓ High reader immersion</text>
+
+    <!-- Metric 3 -->
+    <rect x="600" y="70" width="250" height="170" rx="10" fill="#0b1728" stroke="#172e4b" stroke-width="1"/>
+    <text x="620" y="105" fill="#94a3b8" font-family="system-ui" font-size="12">HOTSPOT CTR</text>
+    <text x="620" y="145" fill="#ec4899" font-family="monospace" font-size="32" font-weight="800">14.6%</text>
+    <text x="620" y="175" fill="#64748b" font-family="system-ui" font-size="11">Video plays & buy clicks</text>
+    <text x="620" y="200" fill="#38bdf8" font-family="system-ui" font-size="12" font-weight="600">✓ Commerce conversion lift</text>
+  </g>
+</svg>

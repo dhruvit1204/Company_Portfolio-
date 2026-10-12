@@ -1,0 +1,1803 @@
+{
+  "company": {
+    "name": "Exception IT Solutions",
+    "shortName": "Exception IT",
+    "tagline": "We Engineer Exceptions.",
+    "heroHeadline": "Engineering Digital Experiences That Move Businesses Forward.",
+    "heroSubheadline": "Explore how Exception IT transforms ideas into digital products through modern web development, intelligent automation, and technology-driven solutions.",
+    "philosophyHeadline": "Built with Purpose. Designed for People. Engineered for Growth.",
+    "email": "exceptionitsolution@gmail.com",
+    "phone": "+91 76984 04843",
+    "phoneSecondary": "+91 98242 14100",
+    "phones": [
+      {
+        "display": "+91 76984 04843",
+        "raw": "+917698404843"
+      },
+      {
+        "display": "+91 98242 14100",
+        "raw": "+919824214100"
+      }
+    ],
+    "mainWebsiteUrl": "https://exceptionit.com/",
+    "servicesUrl": "https://exceptionit.com/#services",
+    "contactUrl": "https://exceptionit.com/#contact",
+    "socials": {
+      "instagram": "https://www.instagram.com/exception_it?igsh=MW9hZWt6ZWNydTRoeQ==",
+      "facebook": "https://www.facebook.com/share/1Jr3cyAZKm/?mibextid=wwXIfr",
+      "linkedin": "https://www.linkedin.com/company/exception-it-solutions/"
+    },
+    "principles": [
+      {
+        "title": "Built to ship, not to demo",
+        "description": "Every engagement ends with working software in production — not a slide deck. We hold ourselves accountable to real delivery milestones from day one."
+      },
+      {
+        "title": "Full-stack ownership",
+        "description": "One team handles design, frontend, backend, AI pipelines, cloud infra, and SEO. No finger-pointing between vendors. No gap between what is designed and what gets built."
+      },
+      {
+        "title": "Embedded, not outsourced",
+        "description": "We join your channels, attend stand-ups, and communicate with transparency. Expect candid feedback, direct engineering access, and zero run-around."
+      },
+      {
+        "title": "Quality that compounds",
+        "description": "Clean architecture, typed APIs, documented components, and robust test coverage mean the codebase you get today is still maintainable years from now."
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": "experience-design",
+      "indexNumber": "01",
+      "title": "Interactive Experience Design",
+      "shortDesc": "Crafting captivating visual journeys and seamless interactions.",
+      "blurb": "We craft captivating visual journeys and seamless interactions to keep your audience engaged from the very first click.",
+      "points": [
+        "User journey mapping",
+        "High-fidelity prototyping",
+        "Visual & brand design systems"
+      ],
+      "iconName": "Palette",
+      "highlight": "Human-Centered UX",
+      "statsBadge": "Award-Caliber Prototyping",
+      "accentColor": "#5aa9ff",
+      "accentGlow": "rgba(90, 169, 255, 0.22)",
+      "externalUrl": "https://exceptionit.com/#services"
+    },
+    {
+      "id": "web-development",
+      "indexNumber": "02",
+      "title": "Custom Web Development",
+      "shortDesc": "End-to-end, highly interactive web applications built from scratch.",
+      "blurb": "End-to-end, highly interactive web applications built from scratch with modern full-stack frameworks to captivate your users.",
+      "points": [
+        "Full-stack modern frameworks",
+        "API & microservice integrations",
+        "Responsive enterprise architecture"
+      ],
+      "iconName": "Code2",
+      "highlight": "Rock-Solid Architecture",
+      "statsBadge": "Sub-80ms Latency",
+      "accentColor": "#5aa9ff",
+      "accentGlow": "rgba(90, 169, 255, 0.22)",
+      "externalUrl": "https://exceptionit.com/#services"
+    },
+    {
+      "id": "ai-ml-solutions",
+      "indexNumber": "03",
+      "title": "AI / ML Solutions",
+      "shortDesc": "Custom machine learning models and intelligent pipelines.",
+      "blurb": "Custom deep learning models and intelligent pipelines wired directly into your real workflows to automate processes and unlock insights.",
+      "points": [
+        "LLM & embedding integration",
+        "Predictive business analytics",
+        "Applied automated pipelines"
+      ],
+      "iconName": "Cpu",
+      "highlight": "Intelligent Automation",
+      "statsBadge": "Production-Hardened AI",
+      "accentColor": "#5aa9ff",
+      "accentGlow": "rgba(90, 169, 255, 0.22)",
+      "externalUrl": "https://exceptionit.com/#services"
+    },
+    {
+      "id": "cloud-deployment",
+      "indexNumber": "04",
+      "title": "Cloud & Deployment",
+      "shortDesc": "Scalable architecture and automated deployment pipelines.",
+      "blurb": "Scalable architecture and automated deployment pipelines that take your applications from staging to production without a hitch.",
+      "points": [
+        "Automated CI/CD workflows",
+        "Serverless & container clusters",
+        "Cloud resource cost optimization"
+      ],
+      "iconName": "Cloud",
+      "highlight": "Zero-Downtime Releases",
+      "statsBadge": "99.99% Guaranteed SLA",
+      "accentColor": "#5aa9ff",
+      "accentGlow": "rgba(90, 169, 255, 0.22)",
+      "externalUrl": "https://exceptionit.com/#services"
+    },
+    {
+      "id": "performance-seo",
+      "indexNumber": "05",
+      "title": "Performance & SEO Strategy",
+      "shortDesc": "Comprehensive technical optimization for search rankings.",
+      "blurb": "Comprehensive technical optimization that ensures your digital products not only run flawlessly but dominate search engine rankings.",
+      "points": [
+        "Technical SEO architecture",
+        "Core Web Vitals tuning",
+        "Speed & performance audits"
+      ],
+      "iconName": "TrendingUp",
+      "highlight": "Top Rankings & Speed",
+      "statsBadge": "100/100 Core Web Vitals",
+      "accentColor": "#5aa9ff",
+      "accentGlow": "rgba(90, 169, 255, 0.22)",
+      "externalUrl": "https://exceptionit.com/#services"
+    },
+    {
+      "id": "cybersecurity-vapt",
+      "indexNumber": "06",
+      "title": "Cybersecurity & VAPT",
+      "shortDesc": "Vulnerability assessment, penetration testing, and security posture hardening.",
+      "blurb": "Comprehensive Vulnerability Assessment and Penetration Testing (VAPT) paired with zero-trust defense to safeguard your digital assets against threats.",
+      "points": [
+        "VAPT & penetration testing",
+        "Application & API security hardening",
+        "Threat auditing & compliance checks"
+      ],
+      "iconName": "ShieldCheck",
+      "highlight": "Enterprise Security & VAPT",
+      "statsBadge": "Zero-Breach Architecture",
+      "accentColor": "#5aa9ff",
+      "accentGlow": "rgba(90, 169, 255, 0.22)",
+      "externalUrl": "https://exceptionit.com/#services"
+    }
+  ],
+  "processSteps": [
+    {
+      "number": "01",
+      "title": "Discover",
+      "subtitle": "Business problem, goals & scope",
+      "description": "We dive deep into your domain, dissect user friction points, and outline measurable functional specifications. No ambiguous assumptions.",
+      "deliverables": [
+        "Requirements specification",
+        "Architecture feasibility audit",
+        "Milestone roadmap"
+      ],
+      "iconName": "Compass",
+      "duration": "Sprint 01",
+      "tag": "Alignment & Architecture",
+      "metricBadge": "Zero Ambiguity"
+    },
+    {
+      "number": "02",
+      "title": "Design",
+      "subtitle": "User experience & technical blueprint",
+      "description": "We map comprehensive user journeys, craft responsive wireframes, define design tokens, and model secure database schemas.",
+      "deliverables": [
+        "High-fidelity interactive prototype",
+        "System architecture diagram",
+        "API contract schema"
+      ],
+      "iconName": "Layers",
+      "duration": "Sprint 02",
+      "tag": "UX & System Blueprint",
+      "metricBadge": "Pixel Precision"
+    },
+    {
+      "number": "03",
+      "title": "Develop",
+      "subtitle": "Clean, reliable, scalable engineering",
+      "description": "Our engineers write strongly typed, tested, and modular code with modern best practices, continuous commits, and iterative sprint reviews.",
+      "deliverables": [
+        "Component-driven frontend",
+        "Hardened backend APIs",
+        "CI/CD pipeline integration"
+      ],
+      "iconName": "Code2",
+      "duration": "Sprints 03–05",
+      "tag": "Full-Stack Scalability",
+      "metricBadge": "100% Type-Safe"
+    },
+    {
+      "number": "04",
+      "title": "Test",
+      "subtitle": "Functionality, security & speed validation",
+      "description": "Rigorous cross-browser verification, responsive stress-testing, automated API regressions, and Core Web Vitals optimization.",
+      "deliverables": [
+        "Cross-platform QA audit",
+        "Security & vulnerability review",
+        "Lighthouse 95+ performance check"
+      ],
+      "iconName": "ShieldCheck",
+      "duration": "Sprint 06",
+      "tag": "Zero-Defect Verification",
+      "metricBadge": "Enterprise Secure"
+    },
+    {
+      "number": "05",
+      "title": "Deliver",
+      "subtitle": "Production launch & ongoing stability",
+      "description": "Seamless deployment to production cloud infrastructure with zero downtime, telemetry alarms, and post-launch maintenance.",
+      "deliverables": [
+        "Production cloud release",
+        "Comprehensive handover docs",
+        "Real-time uptime monitoring"
+      ],
+      "iconName": "Rocket",
+      "duration": "Release",
+      "tag": "Continuous Availability",
+      "metricBadge": "99.99% Uptime"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "slug": "ecommerce-platform",
+      "title": "ApexStore Modern E-Commerce Platform",
+      "tagline": "High-speed digital commerce architecture with sub-second product filtering and checkout.",
+      "category": "E-Commerce",
+      "type": "Interactive Demo",
+      "summary": "A headless e-commerce store featuring dynamic catalog search, faceted filter engine, persistent wishlist, cart state, and tokenized checkout flow.",
+      "heroColor": "#0f2240",
+      "accentColor": "#5aa9ff",
+      "year": "2025",
+      "clientContext": "Illustrative enterprise retail demonstration engineered by Exception IT Solutions.",
+      "images": [
+        {
+          "url": "/images/projects/ecommerce-platform/storefront.jpg",
+          "caption": "Modern Dark-Mode Storefront & Dynamic Discovery Grid",
+          "tag": "Storefront"
+        },
+        {
+          "url": "/images/projects/ecommerce-platform/filters.jpg",
+          "caption": "Sub-65ms Faceted Multi-Attribute Product Filtering Engine",
+          "tag": "Faceted Filters"
+        },
+        {
+          "url": "/images/projects/ecommerce-platform/checkout.jpg",
+          "caption": "Interactive Slide-Over Shopping Cart & Tokenized Checkout",
+          "tag": "Cart & Checkout"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "React",
+          "category": "Frontend"
+        },
+        {
+          "name": "TypeScript",
+          "category": "Frontend"
+        },
+        {
+          "name": "Tailwind CSS",
+          "category": "Frontend"
+        },
+        {
+          "name": "Node.js",
+          "category": "Backend"
+        },
+        {
+          "name": "Express",
+          "category": "Backend"
+        },
+        {
+          "name": "MongoDB",
+          "category": "Database"
+        },
+        {
+          "name": "JWT Auth",
+          "category": "Tools"
+        }
+      ],
+      "overview": "ApexStore is a full-featured e-commerce prototype engineered to demonstrate performant product discovery, high-conversion product detail interactions, and structured cart orchestration under high traffic conditions.",
+      "problem": "Traditional retail templates suffer from bloated bundle sizes, slow server-rendered filter cascades, and clumsy mobile checkout experiences that elevate cart abandonment.",
+      "objectives": [
+        "Deliver client-side category filtering with instantaneous response times (<100ms).",
+        "Implement multi-attribute product selection (color, size, storage) with persistent stock state.",
+        "Ensure frictionless mobile navigation with slide-over drawers and guest checkout options.",
+        "Architect modular API endpoints ready for microservices scaling."
+      ],
+      "solution": "Engineered a decoupled React front-end powered by an Express/Node backend and MongoDB aggregation pipelines. Client state is managed with lightweight store patterns and persisted to local storage for guest retention.",
+      "keyFeatures": [
+        {
+          "title": "Faceted Multi-Filter Engine",
+          "description": "Instant filtering by price range, brand, ratings, and stock status without full page reloads."
+        },
+        {
+          "title": "Interactive Cart & Mini-Drawer",
+          "description": "Real-time cart updates with promotional coupon validation and shipping threshold meters."
+        },
+        {
+          "title": "Wishlist & Quick View Modal",
+          "description": "Seamless quick previews allowing customers to inspect product details without abandoning their browsing context."
+        },
+        {
+          "title": "Robust Security & Checkout Flow",
+          "description": "Role-based authentication, address validation, and simulated multi-gateway payment processing."
+        }
+      ],
+      "architecture": [
+        "Single Page Application architecture with client-side route code-splitting",
+        "RESTful Express services with schema validation using Joi/Zod",
+        "Indexed MongoDB queries utilizing compound indexing for faceted search",
+        "Optimistic UI state updates for immediate user feedback"
+      ],
+      "challenges": [
+        {
+          "challenge": "Maintaining real-time product inventory counts without overloading the catalog database during flash-sale conditions.",
+          "solution": "Implemented in-memory cache layers for read-heavy product pages with atomic decrement operations on database transactions."
+        },
+        {
+          "challenge": "Fluid responsive layout that preserves faceted filters on mobile displays without cluttering the screen.",
+          "solution": "Created an accessible slide-in bottom sheet with tactile touch triggers and sticky apply filters button."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Filter Latency",
+          "value": "< 65ms",
+          "detail": "Instantaneous client-side filter computation"
+        },
+        {
+          "label": "Catalog Size",
+          "value": "1,000+",
+          "detail": "Stress-tested with high item variance"
+        },
+        {
+          "label": "Lighthouse Score",
+          "value": "98/100",
+          "detail": "Optimized asset delivery and clean DOM"
+        }
+      ]
+    },
+    {
+      "id": "proj-2",
+      "slug": "ai-recommendation-system",
+      "title": "Synapse AI Recommendation Engine",
+      "tagline": "Vector-powered neural discovery system matching users with hyper-relevant digital assets.",
+      "category": "AI & Automation",
+      "type": "Enterprise Prototype",
+      "summary": "Personalized recommendation platform leveraging embedding vectors, semantic similarity search, and automated real-time behavioral reranking.",
+      "heroColor": "#0a192f",
+      "accentColor": "#e0a23c",
+      "year": "2025",
+      "clientContext": "Conceptual AI system designed to demonstrate intelligent content discovery capabilities.",
+      "images": [
+        {
+          "url": "/images/projects/ai-recommendation-system/vector-matrix.jpg",
+          "caption": "384-Dimensional Vector Similarity Matrix & Neural Topology",
+          "tag": "Vector Matrix"
+        },
+        {
+          "url": "/images/projects/ai-recommendation-system/recommendation-feed.jpg",
+          "caption": "Context-Aware Recommendation Feed with Explainable AI Badges",
+          "tag": "Discovery Feed"
+        },
+        {
+          "url": "/images/projects/ai-recommendation-system/inference-telemetry.jpg",
+          "caption": "ONNX Runtime Inference Telemetry with 98.4ms P95 Latency",
+          "tag": "Telemetry"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "React",
+          "category": "Frontend"
+        },
+        {
+          "name": "TypeScript",
+          "category": "Frontend"
+        },
+        {
+          "name": "Python",
+          "category": "Backend"
+        },
+        {
+          "name": "FastAPI",
+          "category": "Backend"
+        },
+        {
+          "name": "PyTorch / Transformers",
+          "category": "AI / Cloud"
+        },
+        {
+          "name": "ChromaDB / Vector DB",
+          "category": "Database"
+        },
+        {
+          "name": "Tailwind CSS",
+          "category": "Frontend"
+        }
+      ],
+      "overview": "Synapse AI models user engagement patterns to generate continuous, context-aware suggestions. It bridges modern React presentation layers with high-throughput Python embedding pipelines.",
+      "problem": "Standard keyword searches and rule-based recommendation tables fail when user intent is implicit or queries lack exact token matches.",
+      "objectives": [
+        "Implement semantic embedding generation to understand user interests beyond literal keywords.",
+        "Provide visual explainability: showing users WHY an item was recommended.",
+        "Maintain sub-150ms recommendation inference across hundreds of user preference vectors."
+      ],
+      "solution": "Designed an asynchronous inference architecture: user interactions trigger background embedding calculations, while vector similarity queries return nearest neighbors in millisecond windows.",
+      "keyFeatures": [
+        {
+          "title": "Semantic Similarity Matcher",
+          "description": "Transforms text queries and item metadata into high-dimensional vector representations."
+        },
+        {
+          "title": "Explainable AI Badges",
+          "description": "Displays transparent justification tags such as \"Based on recent interest in Cloud Architecture\"."
+        },
+        {
+          "title": "Cold-Start Adaptive Onboarding",
+          "description": "Rapid user-preference calibration through a 3-step interactive preference selector."
+        },
+        {
+          "title": "Live Confidence Tuning Slider",
+          "description": "Interactive administrative controls to adjust exploratory vs. exploit model weights in real-time."
+        }
+      ],
+      "architecture": [
+        "Microservice pipeline: React front-end connects via OpenAPI specs to FastAPI",
+        "Sentence-Transformers embedding pipeline running on optimized ONNX runtime",
+        "HNSW indexed vector database for sub-linear similarity search times",
+        "Client-side telemetry hook for non-intrusive behavioral scoring"
+      ],
+      "challenges": [
+        {
+          "challenge": "Preventing recommendation bubbles where the model repeatedly surfaces identical categories.",
+          "solution": "Incorporated a dynamic diversity entropy score that injects related but complementary adjacent topics."
+        },
+        {
+          "challenge": "Fast response times over low-bandwidth mobile connections.",
+          "solution": "Pre-computed user cluster embeddings cached on CDN edge nodes with hydration on client mount."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Inference Speed",
+          "value": "112ms",
+          "detail": "Average latency for vector similarity search"
+        },
+        {
+          "label": "Relevance Score",
+          "value": "94.2%",
+          "detail": "Benchmark accuracy in simulated testing"
+        },
+        {
+          "label": "Vector Dimensions",
+          "value": "384d",
+          "detail": "Lightweight embedding dimensionality"
+        }
+      ]
+    },
+    {
+      "id": "proj-3",
+      "slug": "cybersecurity-training-platform",
+      "title": "ShieldOps Cybersecurity Awareness Suite",
+      "tagline": "Interactive enterprise security training, threat simulation, and employee risk analytics.",
+      "category": "Cybersecurity",
+      "type": "Enterprise Prototype",
+      "summary": "A corporate security training LMS with interactive phishing simulation campaigns, vulnerability quizzes, role-based compliance matrices, and risk scoring.",
+      "heroColor": "#0b1e36",
+      "accentColor": "#38bdf8",
+      "year": "2025",
+      "clientContext": "Prototype platform illustrating Exception IT’s cybersecurity educational architecture.",
+      "images": [
+        {
+          "url": "/images/projects/cybersecurity-training-platform/phishing-sandbox.jpg",
+          "caption": "Interactive Simulated Phishing Sandbox & Threat Lure Inspection",
+          "tag": "Phishing Sandbox"
+        },
+        {
+          "url": "/images/projects/cybersecurity-training-platform/risk-heatmap.jpg",
+          "caption": "Enterprise CISO Risk Heatmap & Employee Vulnerability Matrix",
+          "tag": "Risk Heatmap"
+        },
+        {
+          "url": "/images/projects/cybersecurity-training-platform/compliance-audit.svg",
+          "caption": "SOC2 Type II & ISO 27001 Trust Criteria Compliance Suite",
+          "tag": "Audit Reporting"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "React",
+          "category": "Frontend"
+        },
+        {
+          "name": "Tailwind CSS",
+          "category": "Frontend"
+        },
+        {
+          "name": "ASP.NET Core",
+          "category": "Backend"
+        },
+        {
+          "name": "C#",
+          "category": "Backend"
+        },
+        {
+          "name": "PostgreSQL",
+          "category": "Database"
+        },
+        {
+          "name": "OAuth 2.0 / MFA",
+          "category": "Tools"
+        },
+        {
+          "name": "Chart.js",
+          "category": "Frontend"
+        }
+      ],
+      "overview": "ShieldOps is built to educate workforce teams on modern cyber risks through hands-on simulated attack scenarios, realistic email spoof inspections, and real-time posture reporting for CISOs.",
+      "problem": "Human error accounts for over 80% of corporate data breaches. Traditional static slide-deck security courses fail to produce genuine behavioral change against spear-phishing.",
+      "objectives": [
+        "Deliver interactive simulated phishing emails where users must identify malicious indicators.",
+        "Track individual and departmental Risk Indexes from Grade A to Grade F.",
+        "Provide automated micro-training modules upon failed simulation drills.",
+        "Deliver SOC2 and ISO 27001 audit-ready compliance reporting."
+      ],
+      "solution": "Built a multi-tenant React dashboard backed by ASP.NET Core API services with secure data partitioning, audit logs, and gamified security certification paths.",
+      "keyFeatures": [
+        {
+          "title": "Simulated Phishing Sandbox",
+          "description": "Interactive sandbox presenting real-world lures (CEO fraud, fake invoices) with inspectable email headers."
+        },
+        {
+          "title": "Departmental Risk Heatmap",
+          "description": "Visual matrix highlighting departments requiring immediate refresher training based on drill failure rates."
+        },
+        {
+          "title": "Micro-Learning Modules",
+          "description": "Bite-sized 3-minute interactive scenarios covering credential theft, social engineering, and ransomware prevention."
+        },
+        {
+          "title": "Compliance Audit Generator",
+          "description": "Instant PDF export of completion records for compliance officers and external auditors."
+        }
+      ],
+      "architecture": [
+        "ASP.NET Core Clean Architecture with repository pattern and MediatR CQRS",
+        "Entity Framework Core with PostgreSQL and Row-Level Security",
+        "Zero-Trust authentication enforcing strict JWT validation and time-limited tokens",
+        "Encrypted payload storage for all simulated campaign templates"
+      ],
+      "challenges": [
+        {
+          "challenge": "Accurately tracking employee interaction without triggering corporate spam filters.",
+          "solution": "Configured specialized simulation email headers (X-Simulation-ID) matched with internal whitelist rules."
+        },
+        {
+          "challenge": "Maintaining engaging user experience without inducing punitive user anxiety.",
+          "solution": "Framed feedback constructively as immediate learning opportunities with positive reinforcement badges."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Phish Catch Rate",
+          "value": "78% -> 96%",
+          "detail": "Simulated cohort improvement over 90 days"
+        },
+        {
+          "label": "Audit Readiness",
+          "value": "100%",
+          "detail": "Compliant with SOC2 Trust Services criteria"
+        },
+        {
+          "label": "Module Completion",
+          "value": "94%",
+          "detail": "Achieved through 3-minute gamified modules"
+        }
+      ]
+    },
+    {
+      "id": "proj-4",
+      "slug": "workflow-automation-platform",
+      "title": "PulseFlow AI & Business Automation",
+      "tagline": "Visual automation orchestrator connecting ERP, CRM, and cloud services into autonomous workflows.",
+      "category": "AI & Automation",
+      "type": "Interactive Demo",
+      "summary": "A no-code/low-code workflow canvas that automates business operations, processes incoming webhooks, transforms data via AI, and generates operational insights.",
+      "heroColor": "#10223e",
+      "accentColor": "#e0a23c",
+      "year": "2024",
+      "clientContext": "Demonstration orchestrator showing enterprise workflow connectivity.",
+      "images": [
+        {
+          "url": "/images/projects/workflow-automation-platform/node-builder.jpg",
+          "caption": "Visual Drag-and-Drop Node Workflow Orchestrator Canvas",
+          "tag": "Node Canvas"
+        },
+        {
+          "url": "/images/projects/workflow-automation-platform/execution-logs.jpg",
+          "caption": "Real-Time Telemetry & 2,500/sec Redis Queue Pipeline Monitor",
+          "tag": "Queue Telemetry"
+        },
+        {
+          "url": "/images/projects/workflow-automation-platform/ai-document-parser.svg",
+          "caption": "AI-Powered OCR Document Parsing & ERP JSON Transformation",
+          "tag": "AI Parsing"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "React",
+          "category": "Frontend"
+        },
+        {
+          "name": "TypeScript",
+          "category": "Frontend"
+        },
+        {
+          "name": "Node.js",
+          "category": "Backend"
+        },
+        {
+          "name": "Redis",
+          "category": "Database"
+        },
+        {
+          "name": "REST & Webhooks",
+          "category": "Tools"
+        },
+        {
+          "name": "Tailwind CSS",
+          "category": "Frontend"
+        }
+      ],
+      "overview": "PulseFlow enables operations teams to design logic triggers, document parsing pipelines, and notification bots without writing boilerplate integration code.",
+      "problem": "Siloed SaaS applications force employees into manual copy-pasting, invoice data entry, and delayed inter-department communications.",
+      "objectives": [
+        "Provide an intuitive visual node graph where triggers connect to actions.",
+        "Integrate AI document extraction to parse incoming receipts and contracts automatically.",
+        "Guarantee at-least-once message delivery with automated retries and dead-letter queues."
+      ],
+      "solution": "Constructed an event-driven automation engine utilizing Redis Streams and Node.js workers, visualized via an interactive React node workspace.",
+      "keyFeatures": [
+        {
+          "title": "Visual Workflow Builder",
+          "description": "Drag-and-connect trigger nodes, condition gates, API dispatchers, and notification blocks."
+        },
+        {
+          "title": "AI Document Parsing",
+          "description": "Auto-extract structured JSON from unstructured PDF invoices and customer support tickets."
+        },
+        {
+          "title": "Live Execution Monitor",
+          "description": "Real-time telemetry timeline showing step-by-step payload transformations and execution times."
+        },
+        {
+          "title": "Dead-Letter Queue & Auto-Retry",
+          "description": "Configurable backoff algorithms ensuring failed third-party APIs recover without data loss."
+        }
+      ],
+      "architecture": [
+        "Event-driven worker pool processing jobs from distributed Redis queues",
+        "Canvas state management with immutable graph data structures",
+        "Sandboxed JavaScript evaluation engine for safe inline script transforms",
+        "OpenAPI auto-discovery for third-party REST connectors"
+      ],
+      "challenges": [
+        {
+          "challenge": "Handling rate limits imposed by third-party external APIs like Slack or Salesforce.",
+          "solution": "Implemented intelligent token-bucket rate limiters per downstream service with queuing."
+        },
+        {
+          "challenge": "Smooth 60fps graph rendering with dozens of interconnected nodes and connectors.",
+          "solution": "Utilized hardware-accelerated SVG paths and memoized React components."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Manual Time Saved",
+          "value": "85%",
+          "detail": "Simulated reduction in manual data entry"
+        },
+        {
+          "label": "Event Throughput",
+          "value": "2,500/sec",
+          "detail": "Worker pipeline capacity benchmark"
+        },
+        {
+          "label": "Error Recovery",
+          "value": "99.8%",
+          "detail": "Automatic resolution through exponential backoff"
+        }
+      ]
+    },
+    {
+      "id": "proj-5",
+      "slug": "digital-flipbook-platform",
+      "title": "PaperFlow 3D Interactive Flipbook",
+      "tagline": "Transforming static PDF publications into tactile, hardware-accelerated 3D digital magazines.",
+      "category": "Web Development",
+      "type": "Interactive Demo",
+      "summary": "A web-based digital publishing platform that converts standard PDF files into realistic, curlable 3D flipbooks with rich media hotspots and offline reading.",
+      "heroColor": "#122644",
+      "accentColor": "#5aa9ff",
+      "year": "2024",
+      "clientContext": "Interactive publishing technology prototype developed by Exception IT.",
+      "images": [
+        {
+          "url": "/images/projects/digital-flipbook-platform/flipbook-reader.jpg",
+          "caption": "WebGL Hardware-Accelerated 3D Page Curl Reader Experience",
+          "tag": "3D Reader"
+        },
+        {
+          "url": "/images/projects/digital-flipbook-platform/hotspot-editor.jpg",
+          "caption": "Interactive Media Hotspot Studio with Clickable Buy Buttons",
+          "tag": "Hotspot Studio"
+        },
+        {
+          "url": "/images/projects/digital-flipbook-platform/thumbnail-grid.svg",
+          "caption": "Virtual Bookshelf & Reader Attention Span Analytics",
+          "tag": "Bookshelf & Stats"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "React",
+          "category": "Frontend"
+        },
+        {
+          "name": "TypeScript",
+          "category": "Frontend"
+        },
+        {
+          "name": "Next.js",
+          "category": "Frontend"
+        },
+        {
+          "name": "PDF.js",
+          "category": "Tools"
+        },
+        {
+          "name": "Canvas / WebGL",
+          "category": "Tools"
+        },
+        {
+          "name": "Tailwind CSS",
+          "category": "Frontend"
+        }
+      ],
+      "overview": "PaperFlow 3D replaces flat PDF scrolling with a dynamic, page-flipping digital reader that preserves typography while adding interactive video overlays, hyperlinks, and sound effects.",
+      "problem": "Standard PDF viewers in mobile web browsers offer poor reading ergonomics, zero brand immersion, and no analytics on reader attention span.",
+      "objectives": [
+        "Deliver smooth 60fps page curl physics responsive to mouse drag and touch swipe gestures.",
+        "Allow publishers to pin clickable hotspots (video, links, audio) to any page coordinate.",
+        "Achieve instant first-page render without requiring the entire 100MB PDF to download."
+      ],
+      "solution": "Designed a hybrid Canvas & CSS 3D transform renderer coupled with page-by-page streaming via PDF.js worker threads.",
+      "keyFeatures": [
+        {
+          "title": "Tactile Page Turn Physics",
+          "description": "Realistic curvature rendering simulating glossy paper with dynamic drop shadows and corner peeling."
+        },
+        {
+          "title": "Interactive Media Hotspots",
+          "description": "Embed playable product videos, e-commerce buy buttons, and external citations directly onto pages."
+        },
+        {
+          "title": "Thumbnail Grid & Table of Contents",
+          "description": "Rapid chapter navigation with responsive visual thumbnails and text search indexing."
+        },
+        {
+          "title": "Full-Screen Presentation Mode",
+          "description": "Immersive reading environment tailored for desktop monitors, iPads, and smartphones."
+        }
+      ],
+      "architecture": [
+        "Client-side PDF page rendering offloaded to dedicated Web Workers",
+        "Dual-page desktop view dynamically collapsing to single-page on mobile viewports",
+        "WebGL shader effects for paper texture highlights and ambient lighting",
+        "Progressive vector caching for crisp zoom up to 400%"
+      ],
+      "challenges": [
+        {
+          "challenge": "Memory management on mobile browsers when flipping through 80+ page image-dense publications.",
+          "solution": "Implemented virtualized page recycling, releasing canvas bitmaps outside the active viewport window."
+        },
+        {
+          "challenge": "Touch gesture responsiveness across varying mobile device refresh rates.",
+          "solution": "Coupled touch delta tracking directly with requestAnimationFrame for stutter-free dragging."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Render Frame Rate",
+          "value": "60 FPS",
+          "detail": "Hardware-accelerated physics curl"
+        },
+        {
+          "label": "Initial Page Load",
+          "value": "< 1.2s",
+          "detail": "Streamed page-by-page chunking"
+        },
+        {
+          "label": "Engagement Lift",
+          "value": "3.4x",
+          "detail": "Compared to standard flat PDF scroll"
+        }
+      ]
+    },
+    {
+      "id": "proj-6",
+      "slug": "blood-bank-management",
+      "title": "VitalPulse Smart Blood Bank Network",
+      "tagline": "Life-critical blood inventory tracking, donor eligibility management, and emergency hospital dispatch.",
+      "category": "Mobile Applications",
+      "type": "Production Showcase",
+      "summary": "A unified healthcare mobile and web ecosystem connecting voluntary blood donors, blood banks, and hospital emergency rooms for real-time inventory matching.",
+      "heroColor": "#0a1d38",
+      "accentColor": "#f87171",
+      "year": "2024",
+      "clientContext": "Public health initiative architecture designed for rapid emergency resource dispatch.",
+      "images": [
+        {
+          "url": "/images/projects/blood-bank-management/dispatch-radar.jpg",
+          "caption": "Real-Time Hospital Emergency SOS Proximity Radar & GPS Dispatch",
+          "tag": "Emergency Radar"
+        },
+        {
+          "url": "/images/projects/blood-bank-management/inventory-matrix.svg",
+          "caption": "Cold-Chain 3.8°C Storage Matrix & Platelets / Plasma Ledger",
+          "tag": "Cold Storage"
+        },
+        {
+          "url": "/images/projects/blood-bank-management/donor-mobile-app.svg",
+          "caption": "Mobile Donor Companion App with Digital QR ID & Safety Timer",
+          "tag": "Mobile Pass"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "Android / Java",
+          "category": "Frontend"
+        },
+        {
+          "name": "React Web Portal",
+          "category": "Frontend"
+        },
+        {
+          "name": "Node.js",
+          "category": "Backend"
+        },
+        {
+          "name": "Firebase",
+          "category": "Database"
+        },
+        {
+          "name": "PostgreSQL",
+          "category": "Database"
+        },
+        {
+          "name": "Geolocation API",
+          "category": "Tools"
+        }
+      ],
+      "overview": "VitalPulse solves the critical problem of blood shortages during surgical emergencies by maintaining live GPS-linked donor availability and automated inventory reconciliation across regional hospital clusters.",
+      "problem": "Hospitals often waste hours making phone calls during trauma surgeries to locate rare blood groups (such as O-negative), risking patient lives due to lack of synchronized inventory data.",
+      "objectives": [
+        "Centralize live unit counts across A+, B+, AB+, O+, and negative variations with cold-storage temperature tracking.",
+        "Broadcast instant emergency SOS push alerts to eligible nearby donors based on GPS proximity.",
+        "Track donor safety intervals (90-day cooldown between whole-blood donations)."
+      ],
+      "solution": "Architected a native Android donor companion app paired with an admin web dashboard for blood bank operators, synchronized via real-time websockets and Firebase cloud functions.",
+      "keyFeatures": [
+        {
+          "title": "Real-Time Inventory Matrix",
+          "description": "Live unit count dashboard filtered by component type (Whole Blood, Platelets, Plasma, Cryo)."
+        },
+        {
+          "title": "Proximity Emergency SOS",
+          "description": "Automated push notifications dispatched to certified donors within a 15km radius of requesting hospitals."
+        },
+        {
+          "title": "Donor Health & Eligibility Tracker",
+          "description": "Digital health screening questionnaires and automated calculation of next eligible donation dates."
+        },
+        {
+          "title": "Digital Donation Certificate & Card",
+          "description": "Secure QR-code donor cards verifying blood group and emergency contact details."
+        }
+      ],
+      "architecture": [
+        "Secure FHIR-compliant patient data model with role-based access control",
+        "Real-time pub/sub synchronization between hospital stations and mobile donors",
+        "Geo-hashing algorithms for rapid radius queries without scanning entire user tables",
+        "Encrypted donor personal identifiers complying with healthcare privacy standards"
+      ],
+      "challenges": [
+        {
+          "challenge": "Maintaining system operation in low-connectivity rural hospital areas.",
+          "solution": "Engineered an offline-first SQLite cache on Android that synchronizes automatically when network restores."
+        },
+        {
+          "challenge": "Preventing duplicate donor responses to the same hospital emergency request.",
+          "solution": "Implemented atomic reservation slots where donors confirm slots with instant verification."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Dispatch Time",
+          "value": "< 4 Mins",
+          "detail": "From emergency request to donor broadcast"
+        },
+        {
+          "label": "Inventory Sync",
+          "value": "Instant",
+          "detail": "Sub-second real-time websocket updates"
+        },
+        {
+          "label": "Availability Rate",
+          "value": "99.9%",
+          "detail": "Zero downtime for emergency endpoints"
+        }
+      ]
+    },
+    {
+      "id": "proj-7",
+      "slug": "bi-analytics-dashboard",
+      "title": "OmniMetrics Enterprise BI Dashboard",
+      "tagline": "High-density business intelligence platform for executive decision-making and revenue tracking.",
+      "category": "Dashboards",
+      "type": "Enterprise Prototype",
+      "summary": "An executive analytics portal with real-time financial telemetry, ARR forecasting, multi-variant cohort retention tables, and customizable reporting widgets.",
+      "heroColor": "#0c2242",
+      "accentColor": "#38bdf8",
+      "year": "2025",
+      "clientContext": "Enterprise SaaS analytics interface designed by Exception IT Solutions.",
+      "images": [
+        {
+          "url": "/images/projects/bi-analytics-dashboard/executive-kpi.svg",
+          "caption": "Executive KPI Dashboard & 150K Data Point ARR Growth Curve",
+          "tag": "Executive KPI"
+        },
+        {
+          "url": "/images/projects/bi-analytics-dashboard/cohort-heatmap.svg",
+          "caption": "12-Month Net Dollar Retention (NDR) Customer Cohort Heatmap",
+          "tag": "Cohort Heatmap"
+        },
+        {
+          "url": "/images/projects/bi-analytics-dashboard/multi-series-analytics.svg",
+          "caption": "Cross-Border Enterprise Subscription Ledger & Billing Telemetry",
+          "tag": "Revenue Ledger"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "React",
+          "category": "Frontend"
+        },
+        {
+          "name": "TypeScript",
+          "category": "Frontend"
+        },
+        {
+          "name": "Recharts / D3",
+          "category": "Frontend"
+        },
+        {
+          "name": "Tailwind CSS",
+          "category": "Frontend"
+        },
+        {
+          "name": "REST APIs",
+          "category": "Backend"
+        },
+        {
+          "name": "PostgreSQL",
+          "category": "Database"
+        }
+      ],
+      "overview": "OmniMetrics aggregates disparate data streams from Stripe, Salesforce, and internal databases into cohesive, actionable charts designed for executive teams and department heads.",
+      "problem": "Executives struggle with scattered spreadsheets and stale weekly reports that fail to highlight revenue anomalies or customer churn until it is too late.",
+      "objectives": [
+        "Render 100,000+ data point visualizations with smooth pan/zoom and zero frame drops.",
+        "Provide customizable date range filters (LTV, MoM, YoY) with instant re-aggregation.",
+        "Support automated email digest generation and scheduled CSV/PDF exports."
+      ],
+      "solution": "Built a lightweight React dashboard using virtualized tables, optimized SVG chart layers, and responsive CSS grid cards that scale from desktop ultrawides to iPads.",
+      "keyFeatures": [
+        {
+          "title": "Executive KPI Cards",
+          "description": "Instant overview of MRR, Net Retention Rate (NDR), CAC, and active user volume with percentage trends."
+        },
+        {
+          "title": "Interactive Multi-Series Charts",
+          "description": "Revenue vs. Churn line charts with hover tooltip inspections, togglable legends, and zoom slices."
+        },
+        {
+          "title": "Customer Cohort Retention Matrix",
+          "description": "Color-coded retention heatmap showing monthly cohort decay over 12-month periods."
+        },
+        {
+          "title": "Role-Based Dashboard Customization",
+          "description": "Drag-and-drop widget arrangement allowing CFOs, CMOs, and CTOs to curate their unique views."
+        }
+      ],
+      "architecture": [
+        "Declarative React component architecture utilizing TypeScript for strict metric typings",
+        "State persistence in URL query parameters enabling effortless link sharing between executives",
+        "Data virtualization for high-density tabular ledgers holding thousands of transaction records",
+        "Server-side aggregation queries with materialized views for fast analytical computation"
+      ],
+      "challenges": [
+        {
+          "challenge": "Browser CPU lag when recalculating time-series curves across multiple complex filters.",
+          "solution": "Utilized Web Workers to run heavy statistical rolling averages without blocking the UI thread."
+        },
+        {
+          "challenge": "Maintaining high aesthetic polish and contrast across dark and light data-heavy views.",
+          "solution": "Constructed an intentional HSL color system that guarantees WCAG AAA readability on all data charts."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Data Points",
+          "value": "150,000+",
+          "detail": "Rendered smoothly in interactive views"
+        },
+        {
+          "label": "Query Latency",
+          "value": "< 180ms",
+          "detail": "Using materialized analytical views"
+        },
+        {
+          "label": "Export Speed",
+          "value": "1.4s",
+          "detail": "Client-side PDF and Excel generation"
+        }
+      ]
+    },
+    {
+      "id": "proj-8",
+      "slug": "corporate-digital-experience",
+      "title": "Vanguard Digital Corporate Brand Experience",
+      "tagline": "Award-caliber corporate web presence showcasing capabilities, thought leadership, and client pipelines.",
+      "category": "Web Development",
+      "type": "Production Showcase",
+      "summary": "A bespoke corporate agency platform blending sophisticated editorial typography, smooth GSAP ScrollTrigger transitions, and high-converting contact funnels.",
+      "heroColor": "#142a4a",
+      "accentColor": "#e0a23c",
+      "year": "2025",
+      "clientContext": "Flagship engineering showcase embodying the digital agency standard.",
+      "images": [
+        {
+          "url": "/images/projects/corporate-digital-experience/kinetic-hero.svg",
+          "caption": "Award-Caliber Kinetic Typography & 60fps Scroll Choreography",
+          "tag": "Kinetic Hero"
+        },
+        {
+          "url": "/images/projects/corporate-digital-experience/editorial-showcase.svg",
+          "caption": "Asymmetric Editorial Case Study Gallery & Interactive Reels",
+          "tag": "Editorial Gallery"
+        },
+        {
+          "url": "/images/projects/corporate-digital-experience/discovery-configurator.svg",
+          "caption": "Multi-Step Enterprise Project Scope & Timeline Configurator",
+          "tag": "Proposal Flow"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "React",
+          "category": "Frontend"
+        },
+        {
+          "name": "TypeScript",
+          "category": "Frontend"
+        },
+        {
+          "name": "Tailwind CSS",
+          "category": "Frontend"
+        },
+        {
+          "name": "GSAP & ScrollTrigger",
+          "category": "Tools"
+        },
+        {
+          "name": "Vite",
+          "category": "Tools"
+        }
+      ],
+      "overview": "Vanguard Digital reflects the pinnacle of modern web craftsmanship, featuring kinetic typography, smooth viewport reveals, and an undeniable aura of enterprise authority.",
+      "problem": "Corporate websites frequently rely on generic stock templates that look indistinguishable from competitors and fail to establish premium trust with prospective enterprise clients.",
+      "objectives": [
+        "Create an unforgettable first impression within the first 3 seconds of page visit.",
+        "Achieve flawless 60fps animations that never hijack user scrolling or induce disorientation.",
+        "Maximize inbound conversion through structured proposal inquiry flows."
+      ],
+      "solution": "Designed and engineered a custom React application with curated typography, bespoke GSAP micro-animations, semantic HTML5 structure, and full accessibility accommodations.",
+      "keyFeatures": [
+        {
+          "title": "Kinetic Hero Headline & Depth Composition",
+          "description": "Staggered headline character reveals paired with subtle geometric background depth effects."
+        },
+        {
+          "title": "Editorial Case Study Showcase",
+          "description": "Asymmetric project cards that break traditional repetitive grids to highlight key deliverables."
+        },
+        {
+          "title": "Interactive Capability Drawer",
+          "description": "Engaging expandable cards revealing tech capabilities and service deliverables on demand."
+        },
+        {
+          "title": "Guided Project Discovery Flow",
+          "description": "Multi-step proposal configurator helping prospects specify timeline, scope, and target stack."
+        }
+      ],
+      "architecture": [
+        "Component-scoped GSAP timelines encapsulated within React useLayoutEffect/useEffect contexts",
+        "Zero layout shifts (CLS = 0.0) with explicit aspect ratio preservation and preloaded fonts",
+        "Mobile-first responsive adaptations with reduced motion fallbacks",
+        "Semantic hierarchy with complete ARIA compliance and visible keyboard focus rings"
+      ],
+      "challenges": [
+        {
+          "challenge": "Synchronizing GSAP ScrollTrigger calculations during dynamic font and asset loads.",
+          "solution": "Implemented document font load promises before triggering ScrollTrigger.refresh() calls."
+        },
+        {
+          "challenge": "Ensuring fluid performance across mid-tier mobile hardware.",
+          "solution": "Targeted exclusively GPU-accelerated CSS properties (transform and opacity) for all motion sequences."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Time to Interactive",
+          "value": "0.8s",
+          "detail": "Ultra-fast Vite optimized bundle"
+        },
+        {
+          "label": "First Input Delay",
+          "value": "< 12ms",
+          "detail": "Zero thread blockage"
+        },
+        {
+          "label": "Bounce Rate Reduction",
+          "value": "42%",
+          "detail": "Achieved through captivating visual pacing"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    "All Projects",
+    "Web Development",
+    "E-Commerce",
+    "AI & Automation",
+    "Cybersecurity",
+    "Dashboards",
+    "Mobile Applications"
+  ],
+  "techCategories": [
+    {
+      "id": "frontend",
+      "category": "Frontend & Mobile UI",
+      "shortName": "Frontend & Mobile",
+      "description": "High-performance interactive interfaces, component design systems, and responsive cross-platform mobile apps.",
+      "items": [
+        {
+          "name": "React 19 / 18",
+          "description": "Component-driven interactive web applications with concurrent rendering",
+          "badge": "Core",
+          "iconName": "Code2",
+          "tags": [
+            "Hooks",
+            "Context API",
+            "Server Components"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Next.js 15",
+          "description": "Full-stack React framework with App Router, SSR, and Edge capabilities",
+          "badge": "Modern",
+          "iconName": "Globe",
+          "tags": [
+            "App Router",
+            "Server Actions",
+            "SSR / SSG"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "TypeScript 5+",
+          "description": "Strict static typing, contract validation, and enterprise-grade code safety",
+          "badge": "Safety",
+          "iconName": "FileCode",
+          "tags": [
+            "Strict Mode",
+            "Generics",
+            "Type Inference"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Tailwind CSS",
+          "description": "Atomic utility styling system customized with bespoke design tokens",
+          "badge": "Styling",
+          "iconName": "Layers",
+          "tags": [
+            "JIT Engine",
+            "Responsive",
+            "CSS Variables"
+          ],
+          "level": "Modern"
+        },
+        {
+          "name": "GSAP & Motion",
+          "description": "Curated timeline orchestration, smooth scrolls, and interactive animations",
+          "badge": "Motion",
+          "iconName": "Sparkles",
+          "tags": [
+            "ScrollTrigger",
+            "Timelines",
+            "60 FPS"
+          ],
+          "level": "Modern"
+        },
+        {
+          "name": "React Native",
+          "description": "Cross-platform mobile applications for iOS and Android with native bridges",
+          "badge": "Mobile",
+          "iconName": "Smartphone",
+          "tags": [
+            "iOS & Android",
+            "Expo",
+            "Native Performance"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Flutter & Dart",
+          "description": "High-fidelity compiled multi-platform UI applications with custom renderers",
+          "badge": "Mobile",
+          "iconName": "Smartphone",
+          "tags": [
+            "Dart",
+            "Custom Engine",
+            "Material/Cupertino"
+          ],
+          "level": "Modern"
+        },
+        {
+          "name": "Vue.js 3 / Nuxt",
+          "description": "Reactive progressive web architecture for performant enterprise client portals",
+          "badge": "Modern",
+          "iconName": "Code2",
+          "tags": [
+            "Composition API",
+            "Pinia",
+            "Vite"
+          ],
+          "level": "Modern"
+        },
+        {
+          "name": "Vite & Turbopack",
+          "description": "Sub-second Hot Module Replacement and optimized production bundle splits",
+          "badge": "Build",
+          "iconName": "Zap",
+          "tags": [
+            "ES Modules",
+            "Tree-shaking",
+            "Zero Lag"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Zustand & Redux",
+          "description": "Predictable and lightweight global state stores with zero boilerplate",
+          "badge": "State",
+          "iconName": "Boxes",
+          "tags": [
+            "Global Store",
+            "Immer",
+            "DevTools"
+          ],
+          "level": "Core"
+        }
+      ]
+    },
+    {
+      "id": "backend",
+      "category": "Backend & Microservices",
+      "shortName": "Backend & APIs",
+      "description": "Robust server architecture, microservices, asynchronous workers, and high-throughput API endpoints.",
+      "items": [
+        {
+          "name": "Node.js",
+          "description": "Non-blocking event-driven runtime powering fast concurrent web services",
+          "badge": "Runtime",
+          "iconName": "Server",
+          "tags": [
+            "V8 Engine",
+            "Streams",
+            "Cluster"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "NestJS",
+          "description": "Architectural enterprise TypeScript framework with dependency injection",
+          "badge": "Enterprise",
+          "iconName": "Boxes",
+          "tags": [
+            "Modular",
+            "DI Container",
+            "Microservices"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "Express.js",
+          "description": "Minimalist RESTful routing, middleware pipelines, and auth services",
+          "badge": "API",
+          "iconName": "Terminal",
+          "tags": [
+            "REST Endpoints",
+            "Middleware",
+            "JWT"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "ASP.NET Core (.NET 8)",
+          "description": "Enterprise C# high-speed web services, clean architecture, and CQRS patterns",
+          "badge": "Enterprise",
+          "iconName": "Server",
+          "tags": [
+            "C#",
+            "High Concurrency",
+            "Entity Framework"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "Python / FastAPI",
+          "description": "High-speed asynchronous Python endpoints for AI inference and backend services",
+          "badge": "AI API",
+          "iconName": "Zap",
+          "tags": [
+            "AsyncIO",
+            "Pydantic",
+            "Auto OpenAPI"
+          ],
+          "level": "Modern"
+        },
+        {
+          "name": "Django & DRF",
+          "description": "Batteries-included secure web framework with admin dashboards and ORM",
+          "badge": "Secure",
+          "iconName": "Layers",
+          "tags": [
+            "Django ORM",
+            "Admin Suite",
+            "Authentication"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "Go (Golang)",
+          "description": "Low-memory compiled concurrency with goroutines for mission-critical daemons",
+          "badge": "Fast",
+          "iconName": "Terminal",
+          "tags": [
+            "Goroutines",
+            "Microservices",
+            "Sub-millisecond"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "GraphQL & Apollo",
+          "description": "Strongly typed schema queries, mutations, and unified data federation",
+          "badge": "Schema",
+          "iconName": "Globe",
+          "tags": [
+            "Schema-First",
+            "Resolvers",
+            "Federation"
+          ],
+          "level": "Modern"
+        },
+        {
+          "name": "WebSockets & gRPC",
+          "description": "Low-latency full-duplex streaming and binary RPC communication protocols",
+          "badge": "Realtime",
+          "iconName": "Workflow",
+          "tags": [
+            "Protobuf",
+            "Bi-directional",
+            "Sub-10ms"
+          ],
+          "level": "Realtime"
+        }
+      ]
+    },
+    {
+      "id": "database",
+      "category": "Databases & In-Memory",
+      "shortName": "Data & Storage",
+      "description": "ACID transactional databases, lightning-fast in-memory caching, and vector indexing.",
+      "items": [
+        {
+          "name": "PostgreSQL",
+          "description": "Rock-solid relational ACID persistence with JSONB and row-level security",
+          "badge": "SQL",
+          "iconName": "Database",
+          "tags": [
+            "ACID Transactions",
+            "JSONB Indexing",
+            "RLS Security"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "MongoDB",
+          "description": "Flexible document store for catalog indexing and high-volume unstructured data",
+          "badge": "NoSQL",
+          "iconName": "Database",
+          "tags": [
+            "BSON Documents",
+            "Aggregation Pipeline",
+            "Atlas"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Redis",
+          "description": "Sub-millisecond in-memory cache, rate limiting, and pub/sub message brokers",
+          "badge": "Cache",
+          "iconName": "Zap",
+          "tags": [
+            "In-Memory",
+            "Pub/Sub",
+            "Rate Limiter"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "MySQL / MariaDB",
+          "description": "Battle-tested relational engines for web platforms and enterprise records",
+          "badge": "SQL",
+          "iconName": "Database",
+          "tags": [
+            "InnoDB",
+            "Replication",
+            "Query Optimization"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Supabase",
+          "description": "Modern open-source backend suite with PostgreSQL, Auth, and realtime listeners",
+          "badge": "Realtime",
+          "iconName": "Server",
+          "tags": [
+            "Realtime DB",
+            "PostgREST",
+            "Storage"
+          ],
+          "level": "Modern"
+        },
+        {
+          "name": "Firebase Firestore",
+          "description": "Cloud document database with live listeners and offline sync for mobile apps",
+          "badge": "Realtime",
+          "iconName": "Cloud",
+          "tags": [
+            "Live Sync",
+            "Cloud Functions",
+            "Offline Support"
+          ],
+          "level": "Modern"
+        },
+        {
+          "name": "ChromaDB & Pinecone",
+          "description": "High-dimensional vector stores for semantic retrieval and AI knowledge bases",
+          "badge": "Vector",
+          "iconName": "Cpu",
+          "tags": [
+            "Embeddings",
+            "Cosine Similarity",
+            "RAG Pipelines"
+          ],
+          "level": "GenAI"
+        },
+        {
+          "name": "Prisma & Drizzle ORM",
+          "description": "Type-safe database toolkits, automated migrations, and schema validation",
+          "badge": "ORM",
+          "iconName": "FileCode",
+          "tags": [
+            "Type Safety",
+            "Declarative Migrations",
+            "Zero SQL Drift"
+          ],
+          "level": "Modern"
+        }
+      ]
+    },
+    {
+      "id": "cloud",
+      "category": "Cloud, DevOps & Security",
+      "shortName": "Cloud & DevOps",
+      "description": "Zero-downtime automated deployments, containerized environments, and global edge security.",
+      "items": [
+        {
+          "name": "AWS Cloud Services",
+          "description": "Enterprise architecture spanning S3, EC2, Lambda, ECS, RDS, and CloudFront",
+          "badge": "Cloud",
+          "iconName": "Cloud",
+          "tags": [
+            "S3 Buckets",
+            "Lambda Serverless",
+            "CloudFront CDN"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "Docker Containers",
+          "description": "Isolated containerized execution ensuring identical local and production behavior",
+          "badge": "Containers",
+          "iconName": "Boxes",
+          "tags": [
+            "Multi-Stage Builds",
+            "Compose",
+            "Lightweight"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Kubernetes (K8s)",
+          "description": "Automated container orchestration, blue-green rollouts, and self-healing pods",
+          "badge": "Scale",
+          "iconName": "Server",
+          "tags": [
+            "Cluster Orchestration",
+            "Auto-scaling",
+            "Ingress"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "GitHub Actions CI/CD",
+          "description": "Automated test pipelines, linter audits, security scans, and continuous deployment",
+          "badge": "DevOps",
+          "iconName": "Workflow",
+          "tags": [
+            "Automated Tests",
+            "Branch Protection",
+            "Staged Deploy"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Vercel Edge Network",
+          "description": "Global multi-region edge deployment with preview branches and instant rollbacks",
+          "badge": "Edge",
+          "iconName": "Globe",
+          "tags": [
+            "Edge Middleware",
+            "Global CDN",
+            "Instant Previews"
+          ],
+          "level": "Modern"
+        },
+        {
+          "name": "Nginx & Reverse Proxies",
+          "description": "High-performance SSL termination, load balancing, and HTTP/2 gzip compression",
+          "badge": "Infra",
+          "iconName": "Terminal",
+          "tags": [
+            "SSL / TLS",
+            "Load Balancing",
+            "Rate Limits"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "Cloudflare WAF & CDN",
+          "description": "Global DDoS protection, edge caching, DNS routing, and firewall rules",
+          "badge": "Security",
+          "iconName": "ShieldCheck",
+          "tags": [
+            "DDoS Mitigation",
+            "WAF Rules",
+            "Edge Cache"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "OAuth 2.0 & JWT Security",
+          "description": "Zero-trust token authorization, biometric MFA, and role-based access control",
+          "badge": "Security",
+          "iconName": "ShieldCheck",
+          "tags": [
+            "Role-Based RBAC",
+            "JWT Tokens",
+            "MFA Protocols"
+          ],
+          "level": "Enterprise"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "category": "AI, Machine Learning & Automation",
+      "shortName": "AI & Automation",
+      "description": "Generative AI pipelines, contextual vector embeddings, autonomous agents, and workflow automations.",
+      "items": [
+        {
+          "name": "OpenAI & Claude APIs",
+          "description": "State-of-the-art LLM orchestration for reasoning, semantic analysis, and smart agents",
+          "badge": "GenAI",
+          "iconName": "Sparkles",
+          "tags": [
+            "GPT-4o",
+            "Claude 3.5 Sonnet",
+            "Function Calling"
+          ],
+          "level": "GenAI"
+        },
+        {
+          "name": "LangChain & LlamaIndex",
+          "description": "Frameworks for context-augmented retrieval (RAG) and memory-enabled agents",
+          "badge": "RAG",
+          "iconName": "Workflow",
+          "tags": [
+            "Retrieval Augmented",
+            "Vector Indexing",
+            "Tool Use"
+          ],
+          "level": "GenAI"
+        },
+        {
+          "name": "Python ML (PyTorch / Scikit)",
+          "description": "Predictive modeling, custom classification, and machine learning data pipelines",
+          "badge": "ML",
+          "iconName": "Cpu",
+          "tags": [
+            "Neural Networks",
+            "Model Evaluation",
+            "Feature Engineering"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "Vector Embeddings & Search",
+          "description": "Semantic vector representations enabling natural language knowledge discovery",
+          "badge": "AI Search",
+          "iconName": "Search",
+          "tags": [
+            "Text Embeddings",
+            "Hybrid Search",
+            "Semantic Ranking"
+          ],
+          "level": "GenAI"
+        },
+        {
+          "name": "n8n & Webhook Automation",
+          "description": "Event-driven cross-system workflows integrating CRM, payment, and analytics APIs",
+          "badge": "Automation",
+          "iconName": "Workflow",
+          "tags": [
+            "Webhooks",
+            "Workflow Nodes",
+            "Zero-Code Bridges"
+          ],
+          "level": "Modern"
+        },
+        {
+          "name": "Hugging Face Transformers",
+          "description": "Open-source transformer models for localized inference, translation, and sentiment",
+          "badge": "Open AI",
+          "iconName": "Cpu",
+          "tags": [
+            "Transformers",
+            "Local Inference",
+            "Fine-Tuning"
+          ],
+          "level": "Modern"
+        },
+        {
+          "name": "BullMQ & Distributed Queues",
+          "description": "High-reliability Redis background job workers with exponential backoff retries",
+          "badge": "Queues",
+          "iconName": "Zap",
+          "tags": [
+            "Distributed Jobs",
+            "Retry Policies",
+            "Concurrency"
+          ],
+          "level": "Enterprise"
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "category": "Testing, Tooling & Standards",
+      "shortName": "Tooling & Quality",
+      "description": "Automated regression safety, rigorous code standards, API documentation, and design synchronization.",
+      "items": [
+        {
+          "name": "Vitest & Jest",
+          "description": "Blazing fast unit test suites and snapshot testing for regression prevention",
+          "badge": "Testing",
+          "iconName": "CheckCircle2",
+          "tags": [
+            "Unit Testing",
+            "Mock Systems",
+            "Code Coverage"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Playwright E2E",
+          "description": "Resilient multi-browser end-to-end integration tests preventing UI regression",
+          "badge": "Testing",
+          "iconName": "CheckCircle2",
+          "tags": [
+            "Chromium / WebKit",
+            "Headless Runs",
+            "Visual Regression"
+          ],
+          "level": "Enterprise"
+        },
+        {
+          "name": "ESLint & Strict Typing",
+          "description": "Automated lint rules, strict zero-any TypeScript policies, and automated formatting",
+          "badge": "Quality",
+          "iconName": "FileCode",
+          "tags": [
+            "Strict Typing",
+            "Code Consistency",
+            "Zero Warnings"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Postman & OpenAPI",
+          "description": "Comprehensive API contract documentation, mocking servers, and collection runners",
+          "badge": "API Tools",
+          "iconName": "Terminal",
+          "tags": [
+            "Swagger / OpenAPI",
+            "Automated Tests",
+            "SDK Generation"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Git & Branch Reviews",
+          "description": "Trunk-based and feature-branch workflows with peer reviews and semantic versions",
+          "badge": "VCS",
+          "iconName": "GitBranch",
+          "tags": [
+            "Pull Requests",
+            "Semantic Releases",
+            "Rebase Strategy"
+          ],
+          "level": "Core"
+        },
+        {
+          "name": "Figma Design System Sync",
+          "description": "Design token architecture bridging Figma visual components directly to code",
+          "badge": "Design",
+          "iconName": "Layers",
+          "tags": [
+            "Design Tokens",
+            "Component Parity",
+            "Design Handoff"
+          ],
+          "level": "Modern"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800">
+  <defs>
+    <linearGradient id="flowBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#091424"/>
+      <stop offset="50%" stop-color="#0f2138"/>
+      <stop offset="100%" stop-color="#0a1626"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="cyanLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="800" fill="url(#flowBg)"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1000" height="64" fill="#0c1b2f"/>
+  <line x1="0" y1="64" x2="1000" y2="64" stroke="#1e3450" stroke-width="1"/>
+  <circle cx="36" cy="32" r="14" fill="#f59e0b" fill-opacity="0.2"/>
+  <polygon points="32,24 42,32 32,40" fill="#f59e0b"/>
+  <text x="60" y="38" fill="#ffffff" font-family="system-ui" font-size="16" font-weight="700">PULSEFLOW AI DOCUMENT EXTRACTOR</text>
+  <rect x="420" y="20" width="160" height="26" rx="13" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/>
+  <circle cx="435" cy="33" r="4" fill="#10b981"/>
+  <text x="446" y="38" fill="#34d399" font-family="monospace" font-size="11">PIPELINE LIVE: 99.8%</text>
+
+  <!-- Left: Incoming Unstructured Invoice Preview -->
+  <g transform="translate(40, 90)">
+    <rect x="0" y="0" width="430" height="660" rx="14" fill="#112239" stroke="#1f395c" stroke-width="1"/>
+    <text x="24" y="38" fill="#f1f5f9" font-family="system-ui" font-size="15" font-weight="700">Incoming PDF Invoice (Unstructured)</text>
+    
+    <!-- Invoice Mock Sheet -->
+    <rect x="24" y="60" width="382" height="570" rx="8" fill="#ffffff"/>
+    <rect x="48" y="90" width="120" height="18" rx="4" fill="#1e293b"/>
+    <text x="54" y="104" fill="#ffffff" font-family="system-ui" font-size="10" font-weight="700">APEX LOGISTICS LLC</text>
+    
+    <text x="280" y="100" fill="#64748b" font-family="monospace" font-size="10">INVOICE #4092</text>
+    <text x="280" y="115" fill="#64748b" font-family="monospace" font-size="10">DATE: 2025-10-11</text>
+
+    <!-- Bounding boxes highlighted by AI -->
+    <rect x="48" y="170" width="170" height="38" rx="4" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="56" y="185" fill="#b45309" font-family="monospace" font-size="9">VENDOR (CONFIDENCE: 99.4%)</text>
+    <text x="56" y="200" fill="#0f172a" font-family="system-ui" font-size="11" font-weight="600">Silicon Photonics Corp</text>
+
+    <rect x="48" y="240" width="334" height="160" rx="4" fill="#38bdf8" fill-opacity="0.08" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="56" y="255" fill="#0284c7" font-family="monospace" font-size="9">LINE ITEMS TABLE (CONFIDENCE: 98.9%)</text>
+    <line x1="56" y1="270" x2="370" y2="270" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="56" y="288" fill="#334155" font-family="system-ui" font-size="11">Optic Transceiver QSFP28 100G (x4)</text>
+    <text x="320" y="288" fill="#0f172a" font-family="monospace" font-size="11">$3,800.00</text>
+    <text x="56" y="320" fill="#334155" font-family="system-ui" font-size="11">Fiber Patch Cables OM4 10m (x12)</text>
+    <text x="335" y="320" fill="#0f172a" font-family="monospace" font-size="11">$480.00</text>
+
+    <rect x="230" y="440" width="152" height="44" rx="4" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="240" y="456" fill="#047857" font-family="monospace" font-size="9">TOTAL AMOUNT</text>
+    <text x="240" y="475" fill="#065f46" font-family="monospace" font-size="16" font-weight="800">$4,280.00</text>
+  </g>
+
+  <!-- Center Arrow -->
+  <g transform="translate(475, 400)">
+    <circle cx="25" cy="0" r="22" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+    <path d="M18 -8 L28 0 L18 8" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right: Extracted JSON Schema Payload -->
+  <g transform="translate(530, 90)">
+    <rect x="0" y="0" width="430" height="660" rx="14" fill="#0d1c2e" stroke="#1f395c" stroke-width="1"/>
+    <text x="24" y="38" fill="#38bdf8" font-family="system-ui" font-size="15" font-weight="700">Structured JSON Output (Dispatched to ERP)</text>
+    
+    <rect x="24" y="60" width="382" height="570" rx="8" fill="#06111f" stroke="#15273e" stroke-width="1"/>
+    <g font-family="monospace" font-size="12" xml:space="preserve">
+      <text x="44" y="95" fill="#64748b">{</text>
+      <text x="64" y="125" fill="#f59e0b">"document_type"</text><text x="195" y="125" fill="#ffffff">: </text><text x="210" y="125" fill="#34d399">"commercial_invoice"</text><text x="375" y="125" fill="#ffffff">,</text>
+      <text x="64" y="155" fill="#f59e0b">"invoice_id"</text><text x="160" y="155" fill="#ffffff">: </text><text x="175" y="155" fill="#38bdf8">"INV-4092"</text><text x="255" y="155" fill="#ffffff">,</text>
+      <text x="64" y="185" fill="#f59e0b">"vendor"</text><text x="130" y="185" fill="#ffffff">: {</text>
+      <text x="84" y="215" fill="#f59e0b">"name"</text><text x="135" y="215" fill="#ffffff">: </text><text x="150" y="215" fill="#34d399">"Silicon Photonics Corp"</text><text x="330" y="215" fill="#ffffff">,</text>
+      <text x="84" y="245" fill="#f59e0b">"confidence"</text><text x="180" y="245" fill="#ffffff">: </text><text x="195" y="245" fill="#a78bfa">0.994</text>
+      <text x="64" y="275" fill="#ffffff">},</text>
+      <text x="64" y="305" fill="#f59e0b">"line_items"</text><text x="160" y="305" fill="#ffffff">: [</text>
+      <text x="84" y="335" fill="#ffffff">{ </text><text x="96" y="335" fill="#f59e0b">"sku"</text><text x="130" y="335" fill="#ffffff">: </text><text x="145" y="335" fill="#38bdf8">"QSFP28-100G"</text><text x="250" y="335" fill="#ffffff">, </text><text x="260" y="335" fill="#f59e0b">"qty"</text><text x="295" y="335" fill="#ffffff">: </text><text x="305" y="335" fill="#a78bfa">4</text><text x="320" y="335" fill="#ffffff">, </text><text x="330" y="335" fill="#f59e0b">"amt"</text><text x="365" y="335" fill="#ffffff">: </text><text x="375" y="335" fill="#a78bfa">3800</text><text x="410" y="335" fill="#ffffff"> },</text>
+      <text x="84" y="365" fill="#ffffff">{ </text><text x="96" y="365" fill="#f59e0b">"sku"</text><text x="130" y="365" fill="#ffffff">: </text><text x="145" y="365" fill="#38bdf8">"OM4-10M"</text><text x="220" y="365" fill="#ffffff">, </text><text x="230" y="365" fill="#f59e0b">"qty"</text><text x="265" y="365" fill="#ffffff">: </text><text x="275" y="365" fill="#a78bfa">12</text><text x="295" y="365" fill="#ffffff">, </text><text x="305" y="365" fill="#f59e0b">"amt"</text><text x="340" y="365" fill="#ffffff">: </text><text x="350" y="365" fill="#a78bfa">480</text><text x="380" y="365" fill="#ffffff"> }</text>
+      <text x="64" y="395" fill="#ffffff">],</text>
+      <text x="64" y="425" fill="#f59e0b">"total_usd"</text><text x="150" y="425" fill="#ffffff">: </text><text x="165" y="425" fill="#10b981">4280.00</text><text x="230" y="425" fill="#ffffff">,</text>
+      <text x="64" y="455" fill="#f59e0b">"status"</text><text x="130" y="455" fill="#ffffff">: </text><text x="145" y="455" fill="#34d399">"AUTO_APPROVED"</text>
+      <text x="44" y="485" fill="#64748b">}</text>
+    </g>
+
+    <!-- Webhook Dispatch Badge -->
+    <rect x="24" y="570" width="382" height="40" rx="6" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+    <text x="40" y="595" fill="#34d399" font-family="system-ui" font-size="12" font-weight="600">Dispatched to NetSuite & Slack in 284ms</text>
+  </g>
+</svg>

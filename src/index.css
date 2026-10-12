@@ -1,0 +1,339 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Chillax';
+  src: url('/Chillax-Variable.woff2') format('woff2');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-sans: 'Chillax', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Chillax', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-accent: 'Chillax', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Chillax', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-cyprus: #142a4a;
+  --color-cyprus-deep: #0d1c33;
+  --color-cyprus-soft: #214070;
+  --color-sand: #eef0f4;
+  --color-sand-shade: #dde1ea;
+  --color-ink: #131922;
+  --color-ink-muted: #495162;
+  --color-sand-muted: #a7b1c4;
+  --color-silver: #cdd3d0;
+  --color-cyprus-deepest: #0f2240;
+  --color-hero-bloom: #3a5e9c;
+  --color-accent: #e0a23c;
+  --color-accent-blue: #5aa9ff;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-sand);
+  color: var(--color-ink);
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Lenis smooth scrolling rules */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom subtle noise background */
+.bg-grain {
+  background-image: radial-gradient(rgba(20, 42, 74, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-dark-grain {
+  background-image: radial-gradient(rgba(238, 240, 244, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism accents */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(20, 42, 74, 0.08);
+}
+
+.glass-panel-dark {
+  background: rgba(13, 28, 51, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(238, 240, 244, 0.1);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef0f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a7b1c4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #214070;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #142a4a;
+  outline-offset: 3px;
+}
+
+/* Motion mask utilities for GSAP */
+.text-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.text-mask > span {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* Agency subtle floating animations */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtleFloat 6s ease-in-out infinite;
+}
+
+/* Subtle pulse glow for ambient gradients */
+@keyframes ambientGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.08);
+  }
+}
+
+/* Pillar Transition Animation for Hero Card */
+@keyframes pillarFadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-pillar-text {
+  animation: pillarFadeSlide 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-pillar-highlights {
+  animation: pillarFadeSlide 0.42s cubic-bezier(0.16, 1, 0.3, 1) 0.06s both;
+}
+
+.animate-pillar-metrics {
+  animation: pillarFadeSlide 0.46s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.animate-ambient-glow {
+  animation: ambientGlow 8s ease-in-out infinite;
+}
+
+/* Services Infinite Marquee Styles */
+@keyframes servicesMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes servicesMarqueeReverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-services-marquee-forward {
+  animation: servicesMarquee var(--marquee-duration, 36s) linear infinite;
+  will-change: transform;
+}
+
+.animate-services-marquee-backward {
+  animation: servicesMarqueeReverse var(--marquee-duration, 36s) linear infinite;
+  will-change: transform;
+}
+
+.marquee-paused {
+  animation-play-state: paused !important;
+}
+
+/* Tech Stack Infinite Marquees */
+@keyframes techMarqueeLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes techMarqueeRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-tech-marquee-left {
+  animation: techMarqueeLeft 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-tech-marquee-right {
+  animation: techMarqueeRight 30s linear infinite;
+  will-change: transform;
+}
+
+.tech-marquee-container:hover .animate-tech-marquee-left,
+.tech-marquee-container:hover .animate-tech-marquee-right {
+  animation-play-state: paused;
+}
+
+/* Awwwards Dynamic Card Spotlight */
+.card-spotlight {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    550px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    var(--card-glow, rgba(224, 162, 60, 0.18)),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Hide horizontal scrollbar helper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Pipeline Conduit & Process Flow Animations */
+@keyframes pipelineFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.animate-pipeline-flow {
+  background-size: 200% 100%;
+  animation: pipelineFlow 4s linear infinite;
+}
+
+@keyframes stepCardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-step-card-in {
+  animation: stepCardIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(90, 169, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(90, 169, 255, 0);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide default cursor on desktop when precision mouse pointer is active */
+@media (pointer: fine) {
+  body,
+  a,
+  button,
+  [role="button"],
+  .cursor-pointer {
+    cursor: none !important;
+  }
+}

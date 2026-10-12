@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800">
+  <defs>
+    <linearGradient id="csBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b172a"/>
+      <stop offset="50%" stop-color="#122540"/>
+      <stop offset="100%" stop-color="#0a1728"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="800" fill="url(#csBg)"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1000" height="64" fill="#0c1d33"/>
+  <text x="40" y="38" fill="#ffffff" font-family="system-ui" font-size="16" font-weight="800">EDITORIAL CASE STUDY SHOWCASE</text>
+  <rect x="760" y="18" width="200" height="28" rx="14" fill="#1b3658"/>
+  <text x="785" y="37" fill="#fbbf24" font-family="monospace" font-size="11">CURATED SELECTION</text>
+
+  <!-- Editorial Grid -->
+  <g transform="translate(60, 100)">
+    <!-- Main Big Feature Card -->
+    <rect x="0" y="0" width="560" height="630" rx="16" fill="#102540" stroke="#204470" stroke-width="1.5"/>
+    <rect x="24" y="24" width="512" height="340" rx="10" fill="#1b3960"/>
+    <!-- Mock imagery inside -->
+    <circle cx="280" cy="190" r="100" fill="#e0a23c" fill-opacity="0.3"/>
+    <text x="280" y="195" fill="#ffffff" font-family="system-ui" font-size="22" font-weight="800" text-anchor="middle">AURA QUANTUM FINTECH</text>
+
+    <text x="30" y="410" fill="#fbbf24" font-family="monospace" font-size="12" font-weight="700">CASE STUDY 01 • WEALTH MANAGEMENT</text>
+    <text x="30" y="445" fill="#ffffff" font-family="system-ui" font-size="26" font-weight="800">Next-Generation Asset Allocation Portal</text>
+    <text x="30" y="480" fill="#94a3b8" font-family="system-ui" font-size="14">Scalable enterprise financial portal deployed for institutional investors handling $4.2B in custodial capital.</text>
+
+    <rect x="30" y="550" width="160" height="40" rx="20" fill="#e0a23c"/>
+    <text x="55" y="575" fill="#0a1728" font-family="system-ui" font-size="13" font-weight="700">EXPLORE STUDY →</text>
+
+    <!-- Side stacked cards -->
+    <rect x="590" y="0" width="310" height="300" rx="14" fill="#102540" stroke="#204470" stroke-width="1.5"/>
+    <text x="615" y="40" fill="#fbbf24" font-family="monospace" font-size="11">CASE STUDY 02</text>
+    <text x="615" y="70" fill="#ffffff" font-family="system-ui" font-size="20" font-weight="800">Solaria Clean Energy</text>
+    <text x="615" y="100" fill="#94a3b8" font-family="system-ui" font-size="12">Interactive solar farm telemetry platform with real-time mega-watt output dashboards.</text>
+    <text x="615" y="240" fill="#38bdf8" font-family="monospace" font-size="13">Learn More →</text>
+
+    <rect x="590" y="330" width="310" height="300" rx="14" fill="#102540" stroke="#204470" stroke-width="1.5"/>
+    <text x="615" y="370" fill="#fbbf24" font-family="monospace" font-size="11">CASE STUDY 03</text>
+    <text x="615" y="400" fill="#ffffff" font-family="system-ui" font-size="20" font-weight="800">Hyperion Robotics</text>
+    <text x="615" y="430" fill="#94a3b8" font-family="system-ui" font-size="12">Autonomous manufacturing robotics fleet manager with zero-latency websockets.</text>
+    <text x="615" y="570" fill="#38bdf8" font-family="monospace" font-size="13">Learn More →</text>
+  </g>
+</svg>

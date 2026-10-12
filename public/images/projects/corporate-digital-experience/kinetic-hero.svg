@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800">
+  <defs>
+    <linearGradient id="vgBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a182a"/>
+      <stop offset="50%" stop-color="#11253e"/>
+      <stop offset="100%" stop-color="#0b1b30"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#e0a23c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="800" fill="url(#vgBg)"/>
+
+  <!-- Geometric architectural lines in background -->
+  <line x1="120" y1="0" x2="120" y2="800" stroke="#162e4c" stroke-width="1"/>
+  <line x1="500" y1="0" x2="500" y2="800" stroke="#162e4c" stroke-width="1"/>
+  <line x1="880" y1="0" x2="880" y2="800" stroke="#162e4c" stroke-width="1"/>
+  <circle cx="500" cy="400" r="280" fill="none" stroke="#1c3b62" stroke-width="1.5" stroke-dasharray="6,6"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0c1d33" fill-opacity="0.8"/>
+  <text x="60" y="44" fill="#ffffff" font-family="system-ui" font-size="18" font-weight="900" letter-spacing="2">VANGUARD DIGITAL</text>
+  <text x="620" y="43" fill="#cbd5e1" font-family="system-ui" font-size="13">Work</text>
+  <text x="690" y="43" fill="#cbd5e1" font-family="system-ui" font-size="13">Capabilities</text>
+  <text x="795" y="43" fill="#cbd5e1" font-family="system-ui" font-size="13">Philosophy</text>
+  <rect x="880" y="24" width="70" height="30" rx="15" fill="#e0a23c"/>
+  <text x="900" y="44" fill="#0a182a" font-family="system-ui" font-size="11" font-weight="700">INQUIRE</text>
+
+  <!-- Editorial Headline -->
+  <g transform="translate(120, 180)">
+    <rect x="0" y="0" width="180" height="26" rx="13" fill="#e0a23c" fill-opacity="0.15" stroke="#e0a23c" stroke-width="1"/>
+    <text x="14" y="17" fill="#fbbf24" font-family="monospace" font-size="11" font-weight="700">FLAGSHIP BRAND PRESENCE</text>
+
+    <text x="0" y="80" fill="#ffffff" font-family="system-ui" font-size="52" font-weight="900" letter-spacing="-1">ARCHITECTING THE</text>
+    <text x="0" y="145" fill="url(#goldGrad)" font-family="system-ui" font-size="52" font-weight="900" letter-spacing="-1">FUTURE OF ENTERPRISE.</text>
+
+    <text x="0" y="195" fill="#94a3b8" font-family="system-ui" font-size="18" max-width="500">Bespoke digital platforms engineered with kinetic typography,</text>
+    <text x="0" y="222" fill="#94a3b8" font-family="system-ui" font-size="18">award-winning interaction design, and uncompromising performance.</text>
+  </g>
+
+  <!-- Floating Depth Cards Showcase -->
+  <g transform="translate(120, 480)">
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="230" height="240" rx="14" fill="#0f243e" stroke="#224570" stroke-width="1.5"/>
+    <text x="24" y="40" fill="#fbbf24" font-family="monospace" font-size="11">DELIVERABLE 01</text>
+    <text x="24" y="75" fill="#ffffff" font-family="system-ui" font-size="20" font-weight="800">GSAP ScrollTrigger</text>
+    <text x="24" y="105" fill="#94a3b8" font-family="system-ui" font-size="12">Hardware-accelerated viewport sequence animations.</text>
+    <text x="24" y="200" fill="#38bdf8" font-family="monospace" font-size="24" font-weight="800">60 FPS</text>
+    <text x="24" y="220" fill="#64748b" font-family="system-ui" font-size="10">Zero Layout Shift (CLS 0.0)</text>
+
+    <!-- Card 2 -->
+    <rect x="260" y="0" width="230" height="240" rx="14" fill="#0f243e" stroke="#224570" stroke-width="1.5"/>
+    <text x="284" y="40" fill="#fbbf24" font-family="monospace" font-size="11">DELIVERABLE 02</text>
+    <text x="284" y="75" fill="#ffffff" font-family="system-ui" font-size="20" font-weight="800">Kinetic Typography</text>
+    <text x="284" y="105" fill="#94a3b8" font-family="system-ui" font-size="12">Curated variable fonts with staggered character reveals.</text>
+    <text x="284" y="200" fill="#fbbf24" font-family="monospace" font-size="24" font-weight="800">0.8s TTI</text>
+    <text x="284" y="220" fill="#64748b" font-family="system-ui" font-size="10">Sub-second interactive</text>
+
+    <!-- Card 3 -->
+    <rect x="520" y="0" width="240" height="240" rx="14" fill="#0f243e" stroke="#224570" stroke-width="1.5"/>
+    <text x="544" y="40" fill="#fbbf24" font-family="monospace" font-size="11">DELIVERABLE 03</text>
+    <text x="544" y="75" fill="#ffffff" font-family="system-ui" font-size="20" font-weight="800">Conversion Funnels</text>
+    <text x="544" y="105" fill="#94a3b8" font-family="system-ui" font-size="12">Tailored multi-step proposal discovery configurator.</text>
+    <text x="544" y="200" fill="#34d399" font-family="monospace" font-size="24" font-weight="800">+42% Lift</text>
+    <text x="544" y="220" fill="#64748b" font-family="system-ui" font-size="10">Enterprise inbound qualified</text>
+  </g>
+</svg>
