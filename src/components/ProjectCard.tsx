@@ -21,7 +21,7 @@ export const ProjectCard: React.FC<Props> = ({ project, featured = false, cardIn
     <article
       onMouseEnter={() => setIsCardHovered(true)}
       onMouseLeave={() => setIsCardHovered(false)}
-      className={`project-card-item group relative flex flex-col justify-end rounded-2xl bg-cyprus-deep border border-sand-shade/80 shadow-md hover:shadow-2xl hover:border-cyprus/50 transition-[border-color,box-shadow] duration-500 overflow-hidden ${
+      className={`project-card-item group relative flex flex-col justify-end rounded-2xl bg-cyprus-deep border border-sand-shade/80 shadow-md hover:shadow-2xl hover:border-cyprus/50 transition-[border-color,box-shadow] duration-500 overflow-hidden transform-gpu will-change-transform ${
         featured ? 'lg:col-span-2' : ''
       } h-[410px] sm:h-[430px] md:h-[450px]`}
     >
@@ -48,7 +48,7 @@ export const ProjectCard: React.FC<Props> = ({ project, featured = false, cardIn
 
       {/* 3. Expandable Frosted Glass Details Drawer (Bottom) */}
       <div
-        className={`relative z-20 w-full bg-cyprus-deep/95 backdrop-blur-xl border-t border-white/15 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[0_-8px_30px_rgba(0,0,0,0.35)] ${
+        className={`relative z-20 w-full bg-cyprus-deep/95 backdrop-blur-xl border-t border-white/15 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[0_-8px_30px_rgba(0,0,0,0.35)] transform-gpu will-change-transform ${
           isMobileExpanded
             ? 'translate-y-0'
             : 'translate-y-[calc(100%-80px)] md:translate-y-[calc(100%-80px)] md:group-hover:translate-y-0 md:group-focus-within:translate-y-0'

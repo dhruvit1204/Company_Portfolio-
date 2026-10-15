@@ -318,6 +318,21 @@ body {
   animation: pulseGlow 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+@keyframes scrollerProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-scroller-progress {
+  animation-name: scrollerProgress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;

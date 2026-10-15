@@ -131,7 +131,9 @@ export const ProjectExplorer: React.FC<Props> = () => {
     return () => ctx.revert();
   }, []);
 
-  // ScrollTrigger batch entrance animation when cards enter the viewport on scroll down (phone & desktop)
+  const isInitialMount = useRef(true);
+
+  // Smooth entrance & filter reveal animations for project cards
   useEffect(() => {
     if (isReducedMotion() || !gridRef.current) return;
 
@@ -142,32 +144,88 @@ export const ProjectExplorer: React.FC<Props> = () => {
     // Use requestAnimationFrame to ensure DOM nodes are rendered and measured
     const rafId = requestAnimationFrame(() => {
       ctx = gsap.context(() => {
-        const cards = gridRef.current?.querySelectorAll('.project-card-item');
+        const cards = gridRef.current?.querySelectorAll<HTMLElement>('.project-card-item');
         if (!cards || cards.length === 0) return;
 
-        // Set initial hidden transform & opacity state for entrance reveal
-        gsap.set(cards, {
-          opacity: 0,
-          y: 45,
-          scale: 0.97,
-        });
+        const isFirst = isInitialMount.current;
+        if (isFirst) {
+          isInitialMount.current = false;
+        }
 
-        // Batch ScrollTrigger ensures that each card (especially in phone view where cards
-        // appear one-by-one vertically) or row of cards animates into view smoothly as the user scrolls down
-        ScrollTrigger.batch(cards, {
-          start: 'top 90%',
-          once: true,
-          onEnter: (batch) => {
-            gsap.to(batch, {
-              opacity: 1,
-              y: 0,
-              scale: 1,
-              duration: 0.75,
-              stagger: 0.1,
-              ease: TRANSITIONS.easePower3,
-              clearProps: 'transform,opacity',
-            });
-          },
+        cards.forEach((card, idx) => {
+          if (isFirst) {
+            // Initial scroll arrival: each card reveals smoothly as it enters the viewport
+            gsap.fromTo(
+              card,
+              {
+                opacity: 0,
+                y: 35,
+                scale: 0.98,
+              },
+              {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.75,
+                delay: (idx % 3) * 0.1, // Stagger row items
+                ease: TRANSITIONS.easePower3,
+                clearProps: 'transform',
+                scrollTrigger: {
+                  trigger: card,
+                  start: 'top 90%',
+                  once: true,
+                },
+              }
+            );
+          } else {
+            // User interacted with category filter or search:
+            const rect = card.getBoundingClientRect();
+            const isInView = rect.top < window.innerHeight * 0.92;
+
+            if (isInView) {
+              // Smooth, immediate cascade for visible cards
+              gsap.fromTo(
+                card,
+                {
+                  opacity: 0,
+                  y: 20,
+                  scale: 0.98,
+                },
+                {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  duration: 0.5,
+                  delay: (idx % 3) * 0.07,
+                  ease: TRANSITIONS.easePower3,
+                  clearProps: 'transform',
+                }
+              );
+            } else {
+              // Below fold: trigger when user scrolls down to them
+              gsap.fromTo(
+                card,
+                {
+                  opacity: 0,
+                  y: 35,
+                  scale: 0.98,
+                },
+                {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  duration: 0.7,
+                  ease: TRANSITIONS.easePower3,
+                  clearProps: 'transform',
+                  scrollTrigger: {
+                    trigger: card,
+                    start: 'top 90%',
+                    once: true,
+                  },
+                }
+              );
+            }
+          }
         });
       }, gridRef);
 

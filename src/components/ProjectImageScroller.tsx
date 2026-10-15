@@ -24,13 +24,10 @@ export const ProjectImageScroller: React.FC<Props> = ({
   const [isTransitioning, setIsTransitioning] = useState(true);
   const [isHoveringImage, setIsHoveringImage] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [progress, setProgress] = useState(0);
   const [imageErrorMap, setImageErrorMap] = useState<Record<number, boolean>>({});
 
-  // 2.4 seconds per image change
-  const slideIntervalMs = 2400;
-  const tickStepMs = 50;
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  // 3.2 seconds per image change for comfortable, premium pacing
+  const slideIntervalMs = 3200;
 
   // Clone first image at the end for an infinite, seamless forward-sliding carousel
   const displayImages = images.length > 1 ? [...images, images[0]] : images;
@@ -61,65 +58,50 @@ export const ProjectImageScroller: React.FC<Props> = ({
   const nextSlide = useCallback(() => {
     setIsTransitioning(true);
     setSlideIndex(prev => prev + 1);
-    setProgress(0);
   }, []);
 
   const prevSlide = useCallback(() => {
     setIsTransitioning(true);
     setSlideIndex(prev => (prev === 0 ? images.length - 1 : prev - 1));
-    setProgress(0);
   }, [images.length]);
 
   const goToSlide = (idx: number, e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
     setIsTransitioning(true);
     setSlideIndex(idx);
-    setProgress(0);
   };
 
   // Seamless infinite loop handler
-  const handleTransitionEnd = () => {
+  const handleTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
+    // Only respond to track transition, prevent bubbling from child elements
+    if (e.target !== e.currentTarget) return;
+
     if (slideIndex >= images.length) {
       // Instantly reset to index 0 without animation
       setIsTransitioning(false);
       setSlideIndex(0);
+      // Re-enable smooth transition for next advance
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setIsTransitioning(true);
+        });
+      });
     }
   };
 
-  // Staggered ticker timer so cards across the grid cycle in an organic rhythm
+  // Lightweight, hardware-friendly timer without 50ms state thrashing
   useEffect(() => {
-    if (!isAutoScrolling) {
-      if (timerRef.current) clearInterval(timerRef.current);
-      return;
-    }
+    if (!isAutoScrolling) return;
 
-    const staggerOffset = (cardIndex % 6) * 300;
-    let initialTimeout: NodeJS.Timeout | null = null;
+    // Organic stagger offset on slide 0 so cards don't all flip at the exact same millisecond
+    const delay = slideIndex === 0 ? slideIntervalMs + (cardIndex % 4) * 350 : slideIntervalMs;
 
-    const startInterval = () => {
-      timerRef.current = setInterval(() => {
-        setProgress(prev => {
-          const nextProgress = prev + (tickStepMs / slideIntervalMs) * 100;
-          if (nextProgress >= 100) {
-            nextSlide();
-            return 0;
-          }
-          return nextProgress;
-        });
-      }, tickStepMs);
-    };
+    const timer = setTimeout(() => {
+      nextSlide();
+    }, delay);
 
-    if (progress === 0 && staggerOffset > 0) {
-      initialTimeout = setTimeout(startInterval, staggerOffset);
-    } else {
-      startInterval();
-    }
-
-    return () => {
-      if (initialTimeout) clearTimeout(initialTimeout);
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
-  }, [isAutoScrolling, nextSlide, slideIntervalMs, cardIndex]);
+    return () => clearTimeout(timer);
+  }, [isAutoScrolling, slideIndex, nextSlide, slideIntervalMs, cardIndex]);
 
   const handleImageError = (index: number) => {
     setImageErrorMap(prev => ({ ...prev, [index]: true }));
@@ -257,12 +239,16 @@ export const ProjectImageScroller: React.FC<Props> = ({
           })}
         </div>
 
-        {/* Real-time Ticker Progress Line (active while auto-scrolling) */}
+        {/* Real-time Ticker Progress Line (Hardware accelerated, 0 React re-renders) */}
         {isAutoScrolling && (
           <div className="w-24 h-0.5 bg-white/20 rounded-full overflow-hidden">
             <div
-              className="h-full bg-accent transition-all duration-50 ease-linear"
-              style={{ width: `${progress}%` }}
+              key={`${slideIndex}-${isAutoScrolling}`}
+              className="h-full bg-accent rounded-full animate-scroller-progress"
+              style={{
+                animationDuration: `${slideIntervalMs}ms`,
+                animationPlayState: isAutoScrolling ? 'running' : 'paused',
+              }}
             />
           </div>
         )}
