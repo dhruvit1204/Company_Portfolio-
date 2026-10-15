@@ -12,7 +12,6 @@ export const IntroLogoPreloader: React.FC<Props> = ({ onComplete }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const backdropRef = useRef<HTMLDivElement>(null);
   const logoBoxRef = useRef<HTMLDivElement>(null);
-  const glintRef = useRef<HTMLDivElement>(null);
 
   const { stop, start } = useSmoothScroll();
   const stopRef = useRef(stop);
@@ -81,7 +80,6 @@ export const IntroLogoPreloader: React.FC<Props> = ({ onComplete }) => {
 
       // 0. Initial States: Logo starts SMALL, subtle, and gently blurred in the center
       gsap.set(logoBoxRef.current, { scale: 0.35, opacity: 0, filter: 'blur(6px)' });
-      gsap.set(glintRef.current, { opacity: 0, scale: 0.3 });
       if (backdropRef.current) {
         gsap.set(backdropRef.current, { opacity: 1 });
       }
@@ -94,20 +92,6 @@ export const IntroLogoPreloader: React.FC<Props> = ({ onComplete }) => {
         duration: 2.2,
         ease: 'power2.out',
         force3D: true,
-      })
-
-      // Specular Bloom Light Pulse as the logo reaches full size
-      .to(glintRef.current, {
-        opacity: 0.9,
-        scale: 1.45,
-        duration: 0.35,
-        ease: 'power2.out',
-      }, '-=0.35')
-      .to(glintRef.current, {
-        opacity: 0,
-        scale: 0.85,
-        duration: 0.55,
-        ease: 'power2.inOut',
       })
 
       // 2. PHASE 2: Center Stage Prestige Hold (1.0s)
@@ -223,16 +207,6 @@ export const IntroLogoPreloader: React.FC<Props> = ({ onComplete }) => {
           className="relative w-64 sm:w-80 md:w-96 aspect-[480/322] flex items-center justify-center will-change-transform drop-shadow-[0_12px_40px_rgba(20,42,74,0.9)]"
           style={{ transformOrigin: 'center center' }}
         >
-          {/* Specular Flash / Bloom */}
-          <div
-            ref={glintRef}
-            className="absolute top-[28%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-60 h-48 sm:h-60 rounded-full pointer-events-none will-change-transform z-30"
-            style={{
-              background: 'radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(90,169,255,0.65) 35%, transparent 70%)',
-              filter: 'blur(10px)',
-            }}
-          />
-
           {/* Official Authentic Exception IT Solutions Logo */}
           <img
             src="/logo-mark.png"
