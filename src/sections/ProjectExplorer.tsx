@@ -11,8 +11,43 @@ interface Props {
 }
 
 export const ProjectExplorer: React.FC<Props> = () => {
-  const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>('All Projects');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>(() => {
+    try {
+      const saved = sessionStorage.getItem('exception_project_category');
+      if (saved && CATEGORIES.includes(saved as ProjectCategory)) {
+        return saved as ProjectCategory;
+      }
+    } catch {
+      // fallback
+    }
+    return 'All Projects';
+  });
+
+  const [searchQuery, setSearchQuery] = useState(() => {
+    try {
+      return sessionStorage.getItem('exception_project_search') || '';
+    } catch {
+      return '';
+    }
+  });
+
+  const handleCategorySelect = (category: ProjectCategory) => {
+    setSelectedCategory(category);
+    try {
+      sessionStorage.setItem('exception_project_category', category);
+    } catch {
+      // ignore
+    }
+  };
+
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
+    try {
+      sessionStorage.setItem('exception_project_search', query);
+    } catch {
+      // ignore
+    }
+  };
 
   const containerRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
@@ -48,6 +83,12 @@ export const ProjectExplorer: React.FC<Props> = () => {
   const handleReset = () => {
     setSelectedCategory('All Projects');
     setSearchQuery('');
+    try {
+      sessionStorage.removeItem('exception_project_category');
+      sessionStorage.removeItem('exception_project_search');
+    } catch {
+      // ignore
+    }
   };
 
   // ScrollTrigger Initial Reveal for Section Header and Controls
@@ -169,12 +210,12 @@ export const ProjectExplorer: React.FC<Props> = () => {
                 type="text"
                 placeholder="Search by title, technology (e.g. React, Python, ASP.NET)..."
                 value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
+                onChange={e => handleSearchChange(e.target.value)}
                 className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-sand-shade text-ink placeholder-ink-muted/60 text-sm shadow-sm focus:border-cyprus focus:outline-none transition-colors"
               />
               {searchQuery && (
                 <button
-                  onClick={() => setSearchQuery('')}
+                  onClick={() => handleSearchChange('')}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-ink-muted hover:text-ink font-mono"
                 >
                   Clear
@@ -205,7 +246,7 @@ export const ProjectExplorer: React.FC<Props> = () => {
                   key={category}
                   role="tab"
                   aria-selected={isActive}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => handleCategorySelect(category)}
                   className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
                     isActive
                       ? 'bg-cyprus text-sand shadow-md'

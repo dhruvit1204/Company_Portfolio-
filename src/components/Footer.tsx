@@ -5,12 +5,9 @@ import {
   Facebook,
   Linkedin,
 } from 'lucide-react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { COMPANY } from '../data/company';
 import { useSmoothScroll } from '../context/SmoothScrollContext';
 import { useSectionTransition } from '../context/SectionTransitionContext';
-import { isReducedMotion, TRANSITIONS } from '../utils/animations';
 
 interface Props {
   onOpenContact: () => void;
@@ -32,30 +29,6 @@ export const Footer: React.FC<Props> = ({ onOpenContact }) => {
     }
   }, [legalModal, stop, start]);
 
-  useEffect(() => {
-    if (isReducedMotion() || !footerRef.current) return;
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    const ctx = gsap.context(() => {
-      gsap.from('.footer-col-item', {
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: 'top 88%',
-          once: true,
-        },
-        y: 35,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: TRANSITIONS.easePower3,
-        clearProps: 'transform,opacity',
-      });
-    }, footerRef);
-
-    return () => ctx.revert();
-  }, []);
-
   const navLinks = [
     { label: 'Projects', href: '/#projects' },
     { label: 'Services', href: '/#services' },
@@ -71,14 +44,6 @@ export const Footer: React.FC<Props> = ({ onOpenContact }) => {
       navigateToSection(targetId);
     } else if (href === '/') {
       navigateToSection('hero');
-    }
-  };
-
-  const handleScrollToTop = () => {
-    if (location.pathname === '/') {
-      navigateToSection('hero');
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -174,7 +139,7 @@ export const Footer: React.FC<Props> = ({ onOpenContact }) => {
           {/* Divider and Bottom Bar */}
           <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
             {/* Copyright & Legal */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-5 text-xs text-sand-muted order-2 sm:order-1 text-center sm:text-left">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-5 text-xs text-sand-muted text-center sm:text-left">
               <span>© {currentYear} {COMPANY.name}. All rights reserved.</span>
               <span className="text-white/20 hidden sm:inline">•</span>
               <button
@@ -192,19 +157,8 @@ export const Footer: React.FC<Props> = ({ onOpenContact }) => {
               </button>
             </div>
 
-            {/* Back to Top Button (round with dot in center, matching official site) */}
-            <button
-              type="button"
-              onClick={handleScrollToTop}
-              className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 hover:scale-105 transition-all duration-200 group cursor-pointer order-1 sm:order-2"
-              aria-label="Scroll to top"
-              title="Back to top"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-            </button>
-
             {/* Social Icons */}
-            <div className="flex items-center gap-3 order-3">
+            <div className="flex items-center gap-3">
               <a
                 href={COMPANY.socials.linkedin}
                 target="_blank"

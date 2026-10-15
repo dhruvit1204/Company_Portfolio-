@@ -13,17 +13,26 @@ import { SectionTransitionOverlay } from './components/SectionTransitionOverlay'
 import { CustomCursor } from './components/CustomCursor';
 import { IntroLogoPreloader } from './components/IntroLogoPreloader';
 
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 // Scroll restoration component: only resets to top when navigating to a new route pathname (e.g. /projects/slug)
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
   const prevPathnameRef = useRef(pathname);
+  const { lenis } = useSmoothScroll();
 
   useEffect(() => {
     if (prevPathnameRef.current !== pathname) {
       prevPathnameRef.current = pathname;
       window.scrollTo(0, 0);
+      if (lenis) {
+        lenis.scrollTo(0, { immediate: true });
+      }
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+      });
     }
-  }, [pathname]);
+  }, [pathname, lenis]);
 
   return null;
 };

@@ -32,7 +32,7 @@ export const ProjectDetailPage: React.FC = () => {
   const [selectedImageIdx, setSelectedImageIdx] = useState(0);
   const [viewTab, setViewTab] = useState<'screenshots' | 'interactive'>('screenshots');
   const containerRef = useRef<HTMLDivElement>(null);
-  const { stop, start } = useSmoothScroll();
+  const { lenis, stop, start } = useSmoothScroll();
   const { navigateToSection } = useSectionTransition();
 
   const project = PROJECTS.find(p => p.slug === slug);
@@ -40,12 +40,19 @@ export const ProjectDetailPage: React.FC = () => {
   // Scroll to top on slug change
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    }
     if (project) {
       document.title = `${project.title} | Case Study | Exception IT Solutions`;
     } else {
       document.title = 'Project Not Found | Exception IT Solutions';
     }
-  }, [project, slug]);
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [project, slug, lenis]);
 
   // Modal scroll lock synchronization
   useEffect(() => {
