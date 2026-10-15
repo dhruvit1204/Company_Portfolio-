@@ -90,28 +90,53 @@ export const ProjectExplorer: React.FC<Props> = () => {
     return () => ctx.revert();
   }, []);
 
-  // Stagger animation when cards are loaded / filtered
+  // ScrollTrigger batch entrance animation when cards enter the viewport on scroll down (phone & desktop)
   useEffect(() => {
     if (isReducedMotion() || !gridRef.current) return;
 
-    const cards = gridRef.current.querySelectorAll('article');
-    if (cards.length > 0) {
-      gsap.fromTo(
-        cards,
-        {
+    gsap.registerPlugin(ScrollTrigger);
+
+    let ctx: gsap.Context;
+
+    // Use requestAnimationFrame to ensure DOM nodes are rendered and measured
+    const rafId = requestAnimationFrame(() => {
+      ctx = gsap.context(() => {
+        const cards = gridRef.current?.querySelectorAll('.project-card-item');
+        if (!cards || cards.length === 0) return;
+
+        // Set initial hidden transform & opacity state for entrance reveal
+        gsap.set(cards, {
           opacity: 0,
-          y: 35,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.7,
-          stagger: 0.08,
-          ease: TRANSITIONS.easePower3,
-          clearProps: 'transform,opacity',
-        }
-      );
-    }
+          y: 45,
+          scale: 0.97,
+        });
+
+        // Batch ScrollTrigger ensures that each card (especially in phone view where cards
+        // appear one-by-one vertically) or row of cards animates into view smoothly as the user scrolls down
+        ScrollTrigger.batch(cards, {
+          start: 'top 90%',
+          once: true,
+          onEnter: (batch) => {
+            gsap.to(batch, {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 0.75,
+              stagger: 0.1,
+              ease: TRANSITIONS.easePower3,
+              clearProps: 'transform,opacity',
+            });
+          },
+        });
+      }, gridRef);
+
+      ScrollTrigger.refresh();
+    });
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      if (ctx) ctx.revert();
+    };
   }, [selectedCategory, searchQuery]);
 
   return (

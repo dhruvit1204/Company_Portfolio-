@@ -21,7 +21,7 @@ export const ProjectCard: React.FC<Props> = ({ project, featured = false, cardIn
     <article
       onMouseEnter={() => setIsCardHovered(true)}
       onMouseLeave={() => setIsCardHovered(false)}
-      className={`group relative flex flex-col justify-end rounded-2xl bg-cyprus-deep border border-sand-shade/80 shadow-md hover:shadow-2xl hover:border-cyprus/50 transition-all duration-500 overflow-hidden ${
+      className={`project-card-item group relative flex flex-col justify-end rounded-2xl bg-cyprus-deep border border-sand-shade/80 shadow-md hover:shadow-2xl hover:border-cyprus/50 transition-[border-color,box-shadow] duration-500 overflow-hidden ${
         featured ? 'lg:col-span-2' : ''
       } h-[410px] sm:h-[430px] md:h-[450px]`}
     >
