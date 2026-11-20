@@ -11,7 +11,8 @@ import {
   Layers,
   Image as ImageIcon,
   Download,
-  FileText
+  FileText,
+  ExternalLink
 } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -204,14 +205,28 @@ export const ProjectDetailPage: React.FC = () => {
             <span className="detail-meta-badge text-xs font-mono text-ink-muted flex items-center gap-1">
               <Calendar className="w-3.5 h-3.5" /> {project.year}
             </span>
-            <button
-              onClick={() => downloadMasterPortfolioPdf()}
-              className="detail-meta-badge ml-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-accent text-cyprus-deepest hover:bg-accent/90 transition-all shadow-sm cursor-pointer"
-              title="Download 17-page B2B Company Portfolio PDF"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>B2B PDF</span>
-            </button>
+            <div className="detail-meta-badge ml-auto flex items-center gap-2">
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-mono font-semibold bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-sm group/live"
+                  title={`Visit ${project.title} live website`}
+                >
+                  <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover/live:translate-x-0.5 group-hover/live:-translate-y-0.5" />
+                  <span>Visit Live Website</span>
+                </a>
+              )}
+              <button
+                onClick={() => downloadMasterPortfolioPdf()}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-accent text-cyprus-deepest hover:bg-accent/90 transition-all shadow-sm cursor-pointer"
+                title="Download 17-page B2B Company Portfolio PDF"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>B2B PDF</span>
+              </button>
+            </div>
           </div>
 
           <h1 className="detail-hero-title text-3xl sm:text-5xl font-bold font-display text-cyprus tracking-tight leading-tight">
@@ -256,7 +271,18 @@ export const ProjectDetailPage: React.FC = () => {
             </div>
 
             {viewTab === 'screenshots' && project.images && project.images.length > 0 && (
-              <div className="flex items-center gap-2 text-xs font-mono text-sand-muted">
+              <div className="flex items-center gap-3 text-xs font-mono text-sand-muted">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/10 hover:bg-white/20 text-accent border border-accent/40 transition-colors"
+                  >
+                    <span>Open Live Site</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
                 <span>Screen {selectedImageIdx + 1} of {project.images.length}</span>
               </div>
             )}
@@ -512,6 +538,17 @@ export const ProjectDetailPage: React.FC = () => {
                 Exception IT Solutions designs and engineers high-speed web apps, custom AI pipelines, and enterprise software matching your exact operational requirements.
               </p>
               <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg inline-flex items-center gap-2 active:scale-95"
+                  >
+                    <span>Visit Live Website</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                )}
                 <button
                   onClick={() => setContactOpen(true)}
                   className="px-6 py-3 rounded-lg bg-sand text-cyprus font-bold text-xs uppercase tracking-wider hover:bg-white transition-all shadow-lg active:scale-95"

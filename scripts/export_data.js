@@ -11,7 +11,8 @@ async function exportData() {
   console.log('Loading TypeScript data using Vite ssrLoadModule...');
   const server = await createServer({
     root: rootDir,
-    server: { middlewareMode: true },
+    server: { middlewareMode: true, watch: null },
+    optimizeDeps: { noDiscovery: true },
     appType: 'custom',
   });
 

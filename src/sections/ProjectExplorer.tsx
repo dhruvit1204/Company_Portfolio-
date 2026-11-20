@@ -328,13 +328,12 @@ export const ProjectExplorer: React.FC<Props> = () => {
         {/* Projects Grid */}
         <div ref={gridRef} className="mt-10">
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+            <div className={`grid grid-cols-1 ${filteredProjects.length === 1 ? 'max-w-2xl' : 'lg:grid-cols-2 max-w-6xl'} mx-auto gap-8 sm:gap-10`}>
               {filteredProjects.map((project, idx) => (
                 <ProjectCard
                   key={project.id}
                   project={project}
                   cardIndex={idx}
-                  featured={idx === 0 && selectedCategory === 'All Projects' && !searchQuery}
                 />
               ))}
             </div>

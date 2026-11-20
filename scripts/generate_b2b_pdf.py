@@ -18,7 +18,10 @@ from reportlab.platypus import (
     PageBreak, KeepTogether, HRFlowable, Image as RLImage
 )
 from reportlab.pdfgen import canvas
-from svglib.svglib import svg2rlg
+try:
+    from svglib.svglib import svg2rlg
+except ImportError:
+    svg2rlg = None
 
 # Page dimensions for A4
 PAGE_WIDTH, PAGE_HEIGHT = A4
@@ -253,7 +256,7 @@ def fit_asset_image(image_path, target_width=USABLE_WIDTH, target_height=140):
 
     ext = os.path.splitext(image_path)[1].lower()
     try:
-        if ext == '.svg':
+        if ext == '.svg' and svg2rlg is not None:
             drawing = svg2rlg(image_path)
             if drawing:
                 scale_x = target_width / float(drawing.width)
@@ -807,10 +810,13 @@ def build_single_case_study_pages(project, styles, is_standalone=False):
     flowables = []
 
     # Header
-    cat_tag = f"{project.get('category', '').upper()} • {project.get('type', '').upper()} • {project.get('year', '2025')}"
+    cat_tag = f"{project.get('category', '').upper()} • {project.get('type', '').upper()} • {project.get('year', '2026')}"
     flowables.append(Paragraph(cat_tag, styles['SectionEyebrow']))
     flowables.append(Paragraph(project['title'], styles['PageTitle']))
-    flowables.append(Paragraph(project.get('tagline', project.get('summary', '')), styles['PageSubtitle']))
+    
+    live_url_html = f" • <b>Live URL:</b> <u><font color='#059669'><a href='{project['liveUrl']}'>{project['liveUrl']}</a></font></u>" if project.get('liveUrl') else ""
+    subtitle_html = f"{project.get('tagline', project.get('summary', ''))}{live_url_html}"
+    flowables.append(Paragraph(subtitle_html, styles['PageSubtitle']))
 
     # 2-Column: Left (Problem & Solution), Right (Image & Key Stats)
     left_col = []
@@ -894,10 +900,11 @@ def build_single_case_study_pages(project, styles, is_standalone=False):
     flowables.append(Spacer(1, 8))
 
     # Project Call to Action Footer
+    live_link_cta = f" • <b>Verified Live Site:</b> <u><font color='#059669'><a href='{project['liveUrl']}'>{project['liveUrl']}</a></font></u>" if project.get('liveUrl') else ""
     cta_text = (
-        f"<b>Interested in a solution like {project['title']}?</b> "
+        f"<b>Interested in a solution like {project['title']}?</b>{live_link_cta}<br/>"
         "Discuss your technical scope, architecture feasibility, and milestone roadmap with Exception IT Solutions. "
-        "Visit: <u>https://exceptionit.com</u> or email <u>exceptionitsolution@gmail.com</u>"
+        "Visit: <u>https://exceptionit.com</u> • Email: <u>exceptionitsolution@gmail.com</u>"
     )
     cta_t = Table([[Paragraph(cta_text, ParagraphStyle('CaseCTA', fontName='Helvetica', fontSize=7.5, leading=10, textColor=NAVY_PRIMARY))]], colWidths=[USABLE_WIDTH])
     cta_t.setStyle(TableStyle([

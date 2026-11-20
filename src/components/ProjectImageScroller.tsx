@@ -4,14 +4,14 @@ import { Project, ProjectImageItem } from '../data/projects';
 
 interface Props {
   project: Project;
-  isDetailsOpen: boolean; // True when card is hovered or mobile drawer expanded
+  isDetailsOpen?: boolean;
   cardIndex?: number;
   className?: string;
 }
 
 export const ProjectImageScroller: React.FC<Props> = ({
   project,
-  isDetailsOpen,
+  isDetailsOpen = false,
   cardIndex = 0,
   className = '',
 }) => {
@@ -26,13 +26,13 @@ export const ProjectImageScroller: React.FC<Props> = ({
   const [isVisible, setIsVisible] = useState(true);
   const [imageErrorMap, setImageErrorMap] = useState<Record<number, boolean>>({});
 
-  // 3.2 seconds per image change for comfortable, premium pacing
-  const slideIntervalMs = 3200;
+  // 3.5 seconds per slide
+  const slideIntervalMs = 3500;
 
   // Clone first image at the end for an infinite, seamless forward-sliding carousel
   const displayImages = images.length > 1 ? [...images, images[0]] : images;
 
-  // Track viewport visibility to pause off-screen cards
+  // Track viewport visibility
   useEffect(() => {
     const el = containerRef.current;
     if (!el || typeof IntersectionObserver === 'undefined') return;
@@ -48,7 +48,6 @@ export const ProjectImageScroller: React.FC<Props> = ({
     return () => observer.disconnect();
   }, []);
 
-  // Auto-scroll runs continuously on page, and STOPS when details are opened (hovered/expanded)
   const isAutoScrolling =
     isVisible &&
     !isDetailsOpen &&
@@ -71,16 +70,12 @@ export const ProjectImageScroller: React.FC<Props> = ({
     setSlideIndex(idx);
   };
 
-  // Seamless infinite loop handler
   const handleTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
-    // Only respond to track transition, prevent bubbling from child elements
     if (e.target !== e.currentTarget) return;
 
     if (slideIndex >= images.length) {
-      // Instantly reset to index 0 without animation
       setIsTransitioning(false);
       setSlideIndex(0);
-      // Re-enable smooth transition for next advance
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           setIsTransitioning(true);
@@ -89,13 +84,10 @@ export const ProjectImageScroller: React.FC<Props> = ({
     }
   };
 
-  // Lightweight, hardware-friendly timer without 50ms state thrashing
   useEffect(() => {
     if (!isAutoScrolling) return;
 
-    // Organic stagger offset on slide 0 so cards don't all flip at the exact same millisecond
     const delay = slideIndex === 0 ? slideIntervalMs + (cardIndex % 4) * 350 : slideIntervalMs;
-
     const timer = setTimeout(() => {
       nextSlide();
     }, delay);
@@ -140,17 +132,16 @@ export const ProjectImageScroller: React.FC<Props> = ({
           const hasError = imageErrorMap[realIdx];
 
           return (
-            <div key={`${img.url}-${idx}`} className="relative w-full h-full shrink-0 overflow-hidden">
+            <div key={`${img.url}-${idx}`} className="relative w-full h-full shrink-0 overflow-hidden bg-[#071322]">
               {!hasError ? (
                 <img
                   src={img.url}
                   alt={img.caption || `${project.title} screenshot ${realIdx + 1}`}
                   loading={idx === 0 ? 'eager' : 'lazy'}
                   onError={() => handleImageError(realIdx)}
-                  className="w-full h-full object-cover object-top pointer-events-none"
+                  className="w-full h-full object-cover object-top pointer-events-none transition-transform duration-700 group-hover/scroller:scale-[1.02]"
                 />
               ) : (
-                /* Elegant fallback if image asset fails */
                 <div className="w-full h-full flex flex-col items-center justify-center p-6 bg-gradient-to-br from-cyprus-deep via-[#0d223f] to-[#071322] text-sand">
                   <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-3 border border-white/15">
                     <Layers className="w-7 h-7 text-accent" />
@@ -164,31 +155,14 @@ export const ProjectImageScroller: React.FC<Props> = ({
                 </div>
               )}
 
-              {/* Ambient Dark Scrim for bottom contrast and text legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-cyprus-deep/95 via-transparent to-black/35 pointer-events-none" />
+              {/* Gentle bottom-only vignette for caption legibility, leaving the website screenshot bright and crisp */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
             </div>
           );
         })}
       </div>
 
-      {/* 2. Top-Right Image Counter Badge (Clean pill, Auto tag removed) */}
-      <div className="absolute top-3.5 right-3.5 z-20 flex items-center gap-1.5 pointer-events-none">
-        <span className="px-2.5 py-1 rounded-full text-[11px] font-mono bg-black/60 backdrop-blur-md text-white/90 border border-white/20 shadow-md">
-          {activeDotIndex + 1} / {images.length}
-        </span>
-      </div>
-
-      {/* 3. Image Caption Tag (Top Left under Project Badges) */}
-      {currentImage?.tag && (
-        <div className="absolute top-12 left-3.5 z-20 pointer-events-none transition-all duration-300">
-          <span className="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-cyprus-deep/90 backdrop-blur-md text-sand border border-white/15 shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent-blue" />
-            {currentImage.tag}
-          </span>
-        </div>
-      )}
-
-      {/* 4. Previous / Next Chevrons (Smooth hover reveal) */}
+      {/* 2. Previous / Next Chevrons (Hover Reveal) */}
       {images.length > 1 && (
         <>
           <button
@@ -198,7 +172,7 @@ export const ProjectImageScroller: React.FC<Props> = ({
               e.stopPropagation();
               prevSlide();
             }}
-            className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-accent hover:text-cyprus-deepest text-white flex items-center justify-center backdrop-blur-md border border-white/15 opacity-0 group-hover/scroller:opacity-90 transition-all duration-300 shadow-md hover:scale-105"
+            className="absolute left-3 top-1/2 -translate-y-1/2 z-30 w-8 h-8 rounded-full bg-black/70 hover:bg-accent hover:text-cyprus-deepest text-white flex items-center justify-center backdrop-blur-md border border-white/20 opacity-0 group-hover/scroller:opacity-100 transition-all duration-300 shadow-md hover:scale-105"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
@@ -210,48 +184,46 @@ export const ProjectImageScroller: React.FC<Props> = ({
               e.stopPropagation();
               nextSlide();
             }}
-            className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-accent hover:text-cyprus-deepest text-white flex items-center justify-center backdrop-blur-md border border-white/15 opacity-0 group-hover/scroller:opacity-90 transition-all duration-300 shadow-md hover:scale-105"
+            className="absolute right-3 top-1/2 -translate-y-1/2 z-30 w-8 h-8 rounded-full bg-black/70 hover:bg-accent hover:text-cyprus-deepest text-white flex items-center justify-center backdrop-blur-md border border-white/20 opacity-0 group-hover/scroller:opacity-100 transition-all duration-300 shadow-md hover:scale-105"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
         </>
       )}
 
-      {/* 5. Pagination Indicators & Smooth Progress Line */}
-      <div className="absolute bottom-[88px] left-0 right-0 z-20 px-4 flex flex-col items-center gap-1.5 pointer-events-auto">
-        {/* Slide Indicator Dots */}
-        <div className="flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/15 shadow-md">
-          {images.map((_, idx) => {
-            const isActive = idx === activeDotIndex;
-            return (
+      {/* 3. Bottom Overlay Controls: Caption Tag on Left, Dots in Center, Counter on Right */}
+      <div className="absolute bottom-3 inset-x-3.5 z-20 flex items-center justify-between pointer-events-none">
+        {/* Left: Current Tag */}
+        {currentImage?.tag ? (
+          <span className="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-black/70 backdrop-blur-md text-sand border border-white/20 shadow-sm pointer-events-auto">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+            {currentImage.tag}
+          </span>
+        ) : <span />}
+
+        {/* Center: Slide Indicator Dots */}
+        {images.length > 1 && (
+          <div className="flex items-center gap-1.5 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 shadow-sm pointer-events-auto">
+            {images.map((_, idx) => (
               <button
                 key={idx}
                 type="button"
                 aria-label={`Go to slide ${idx + 1}`}
                 onClick={e => goToSlide(idx, e)}
                 className={`transition-all duration-300 rounded-full h-1.5 ${
-                  isActive
-                    ? 'w-6 bg-accent shadow-[0_0_8px_rgba(224,162,60,0.6)]'
-                    : 'w-2 bg-white/40 hover:bg-white/80'
+                  idx === activeDotIndex
+                    ? 'w-5 bg-accent shadow-[0_0_8px_rgba(224,162,60,0.6)]'
+                    : 'w-1.5 bg-white/40 hover:bg-white/80'
                 }`}
               />
-            );
-          })}
-        </div>
-
-        {/* Real-time Ticker Progress Line (Hardware accelerated, 0 React re-renders) */}
-        {isAutoScrolling && (
-          <div className="w-24 h-0.5 bg-white/20 rounded-full overflow-hidden">
-            <div
-              key={`${slideIndex}-${isAutoScrolling}`}
-              className="h-full bg-accent rounded-full animate-scroller-progress"
-              style={{
-                animationDuration: `${slideIntervalMs}ms`,
-                animationPlayState: isAutoScrolling ? 'running' : 'paused',
-              }}
-            />
+            ))}
           </div>
         )}
+
+        {/* Right: Slide Counter */}
+        <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-black/70 backdrop-blur-md text-white/90 border border-white/20 shadow-sm pointer-events-auto">
+          {activeDotIndex + 1} / {images.length}
+        </span>
       </div>
     </div>
   );

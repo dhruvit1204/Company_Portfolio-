@@ -117,6 +117,17 @@ export const ProjectQuickModal: React.FC<Props> = ({ project, onClose, onOpenCon
             {project.clientContext}
           </div>
           <div className="flex items-center gap-3 w-full sm:w-auto">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-none px-4 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-500 text-xs font-semibold transition-colors flex items-center justify-center gap-1.5"
+              >
+                <span>Live Site</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
             <button
               onClick={() => {
                 onClose();
